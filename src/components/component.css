@@ -1,0 +1,110 @@
+.carousel-container {
+    overflow: hidden;
+    width: calc(210px * 8); /* Adjust to your preferred width */
+    height: fit-content; /* Adjust to your preferred height */
+    white-space: nowrap;
+    position: relative;
+}
+
+@keyframes carousel {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-210px * 8));
+    }
+}
+
+.carousel {
+    display: flex;
+}
+
+.carousel-track {
+    align-items: center;
+    /* gap: 28px; */
+    animation: 10s carousel infinite linear;
+    display: flex;
+    width: calc(210px * 16); /* Double the width to accommodate duplicated items */
+}
+
+.carousel-track > * {
+    flex: 0 0 210px; /* Ensure each item has a fixed width */
+}
+
+.carousel-image-container {
+  max-width: 210px;
+  width: 100%;
+  margin: 0 32px;
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  position: relative;
+}
+.carousel-image-container > svg {
+    width: 210px;
+}
+.carousel-image-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: inherit;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #eaecf0;
+  backdrop-filter: blur(4px);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  border-radius: 0 0 8px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+.carousel-image-tag > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+.carousel-image-tag > span > svg {
+  width: 20px;
+  height: 20px;
+}
+.carousel-image-container > img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 580px) {
+  .carousel-container {
+    overflow: hidden;
+    width: calc(316px * 12); /* Adjust to your preferred width */
+    height: fit-content; /* Adjust to your preferred height */
+    white-space: nowrap;
+  }
+  .carousel-image-container {
+    /* max-width: 300px; */
+    width: 100%;
+    /* margin: 0 8px; */
+    /* height: 160px; */
+    /* border: 1px solid black; */
+    border-radius: 8px;
+  }
+  .carousel-image-tag {
+    border-top: 0.5px solid #eaecf0;
+    backdrop-filter: blur(2.0000016689300537px);
+    padding: 8px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .carousel-image-tag > span {
+    width: 14px;
+    height: 14px;
+  }
+  .carousel-image-tag > span > svg {
+    width: 14px;
+    height: 14px;
+  }
+}
