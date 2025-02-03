@@ -1,0 +1,22 @@
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid white; /* Change the color to your desired spinner color */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s ease-in-out infinite; /* Apply a simple rotation animation */
+  }
+  .loading{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #005FEB; /* Change the color to your desired spinner color */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
