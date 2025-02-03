@@ -41,7 +41,7 @@ const Navbar = () => {
             Download app
           </button>
         </div>
-        <div className="rounded-full p-[10px] border border-Primary-400 cursor-pointer">
+        <div className="rounded-full p-[10px] border border-Primary-400 cursor-pointer block md:hidden">
           <HiOutlineMenuAlt3
             className="text-Primary-500"
             onClick={() => setShowSide(true)}
