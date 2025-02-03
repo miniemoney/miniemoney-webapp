@@ -3,15 +3,17 @@ import { GiCheckMark } from "react-icons/gi";
 import bgPattern from "/Miniemoney_Pattern.png";
 import Noise from "/Noise.png";
 import { LuMail } from "react-icons/lu";
-import { useState } from "react";
+// import { useState } from "react";
 import { useNavigate } from "react-router";
 import Spinner from "../../components/Spinner/Spinner";
 import { AppleStoreIcon, Logo, NigerianFlag, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
 import PopupModal from "../../components/popupModal";
 
 const PaymentConfirmationPage = () => {
-  const [confirmationStatus, setConfirmationStatus] = useState("success");
-  const [confirming, setConfirming] = useState(false);
+  // const [confirmationStatus, setConfirmationStatus] = useState("success");
+  var confirmationStatus = "success";
+  // const [confirming, setConfirming] = useState(false);
+  const confirming = false
   const navigate = useNavigate();
 
   // const [searchParams, setSearchParams] = useSearchParams();

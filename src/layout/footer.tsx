@@ -43,8 +43,13 @@ const Footer = () => {
               <div className="flex flex-col gap-1">
                 <p className="font-semibold text-Primary-100">Products</p>
                 <div className="flex flex-col">
-                  <p className="py-2 text-white font-medium">MinieLink</p>
-                  <a href="/gifting" className="py-2 text-white font-medium flex items-center gap-1">
+                  <p className="py-2 text-white font-medium cursor-pointer">
+                    MinieLink
+                  </p>
+                  <a
+                    href="/gifting"
+                    className="py-2 text-white font-medium flex items-center gap-1 cursor-pointer"
+                  >
                     Gifting
                   </a>
                 </div>
