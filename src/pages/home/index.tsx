@@ -29,10 +29,12 @@ import { useState } from "react";
 import { faqs, items, testimonials } from "./data";
 import FaqModal from "../../components/faqModal";
 import Footer from "../../layout/footer";
+import DownloadModal from "../../components/downloadModal";
 
 const Home = () => {
   const [currrentBackground, setCurrentbackground] =
-    useState<string>("#D2F3E3");
+      useState<string>("#D2F3E3");
+    const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
     <div className="relative w-screen">
@@ -56,7 +58,10 @@ const Home = () => {
                   The money app for <span className="italic">teenagers</span>
                 </h1>
                 <div className="w-full z-20 bg-Primary-500 rounded-4xl flex items-center justify-between">
-                  <button className="w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                  >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}
                       <FaGooglePlay className="text-white w-4 h-4" />
@@ -84,7 +89,10 @@ const Home = () => {
                 <h1 className="w-full max-w-[360px] text-4xl font-semibold text-white text-center">
                   The money app for <span className="italic">teenagers</span>
                 </h1>
-                <button className="w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
+                <button
+                  onClick={() => setShowModal(true)}
+                  className="hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                >
                   <span className="flex items-center gap-[6px] text-white">
                     <AiFillApple className="text-white w-4 h-4" /> |{" "}
                     <FaGooglePlay className="text-white w-4 h-4" />
@@ -407,7 +415,7 @@ const Home = () => {
                           }`,
                           border: `${
                             currrentBackground === testimonial.background
-                              ? "2px solid #228153"
+                              ? `2px solid ${testimonial.ring}`
                               : "none"
                           }`,
                         }}
@@ -499,7 +507,10 @@ const Home = () => {
                 </h3>
                 <h3 className="text-3xl lg:text-[36px] font-semibold text-gray-900 flex items-center gap-2 flex-wrap">
                   with us today!{" "}
-                  <button className="flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="hover:bg-Primary-600 flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                  >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}
                       <FaGooglePlay className="text-white w-4 h-4" />
@@ -519,6 +530,7 @@ const Home = () => {
         </Section>
       </div>
       <Footer />
+      <DownloadModal open={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
 };

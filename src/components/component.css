@@ -1,9 +1,19 @@
+.carousel{
+  padding: 0 32px;
+  width: fit-content;
+  overflow: hidden;
+  background: linear-gradient(to right, #FCFCFD 0%, rgba(252, 252, 253, 0) 100%);
+height: 100%;
+    z-index: 2;
+}
 .carousel-container {
     overflow: hidden;
     width: calc(210px * 8); /* Adjust to your preferred width */
     height: fit-content; /* Adjust to your preferred height */
     white-space: nowrap;
     position: relative;
+  background: linear-gradient(to right, #FCFCFD 0%, rgba(252, 252, 253, 0) 100%);
+    z-index: 5;
 }
 
 @keyframes carousel {
@@ -40,7 +50,7 @@
   position: relative;
 }
 .carousel-image-container > svg {
-    width: 210px;
+    width: 250px;
 }
 .carousel-image-tag {
   position: absolute;

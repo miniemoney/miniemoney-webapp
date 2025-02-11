@@ -21,7 +21,7 @@ const Footer = () => {
                 The money app for teenagers
               </p>
             </div>
-            <button className="z-20 flex items-center gap-2 text-Primary-500 bg-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
+            <button className="hover:bg-Primary-50 z-20 flex items-center gap-2 text-Primary-500 bg-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
               <span className="flex items-center gap-[6px] text-Primary-500">
                 <AiFillApple className="text-Primary-500 w-4 h-4" /> |{" "}
                 <FaGooglePlay className="text-Primary-500 w-4 h-4" />
@@ -120,25 +120,25 @@ const Footer = () => {
             <div className="flex items-center gap-4">
               <a
                 href="/"
-                className="bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaFacebook className="w-4 text-Primary-500" />
               </a>
               <a
                 href="/"
-                className="bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <AiFillInstagram className="w-4 text-Primary-500" />
               </a>
               <a
                 href="/"
-                className="bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaLinkedin className="w-4 text-Primary-500" />
               </a>
               <a
                 href="/"
-                className="bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaXTwitter className="w-4 text-Primary-500" />
               </a>

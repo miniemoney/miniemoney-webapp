@@ -20,21 +20,25 @@ export const testimonials = [
     id: 1,
     image: testimony1,
     background: "#D2F3E3",
+    ring: "#228153",
   },
   {
     id: 2,
     image: testimony2,
     background: "#D9CBFB",
+    ring: "#340C98",
   },
   {
     id: 3,
     image: testimony3,
     background: "#CAFAFE",
+    ring: "#0394A0",
   },
   {
     id: 4,
     image: testimony4,
     background: "#FAFFAD",
+    ring: "#99A300",
   },
 ];
 

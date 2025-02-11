@@ -9,13 +9,15 @@ const Carousel = ({
 }) => {
   // console.log(items)
   return (
-    <div className="carousel-container">
-      <div className="carousel-track">
-        {items.map((item, index) => (
-          <div className="carousel-image-container" key={index}>
-            {item}
-          </div>
-        ))}
+    <div className='carousel'>
+      <div className="carousel-container ">
+        <div className="carousel-track">
+          {items.map((item, index) => (
+            <div className="carousel-image-container" key={index}>
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
