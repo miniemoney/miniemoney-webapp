@@ -47,7 +47,9 @@ const Navbar = () => {
                           About us
                         </div>
                       ),
-                      onClick: () => {navigate("/about-us");},
+                      onClick: () => {
+                        navigate("/about-us");
+                      },
                     },
                     {
                       id: 2,
@@ -171,7 +173,7 @@ const Navbar = () => {
                     {
                       id: 3,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="flex  items-center gap-4">
                           <ClipBoardIcon className="text-Primary-500 w-6 h-6" />
                           Blog
                         </div>
