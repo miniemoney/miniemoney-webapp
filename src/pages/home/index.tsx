@@ -438,7 +438,7 @@ const Home = () => {
             </div>
           </div>
         </Section>
-        <Section className="px-5 py-[64px] lg:py-[120px] bg-white">
+        <Section id="faq" className="px-5 py-[64px] lg:py-[120px] bg-white">
           <div className="flex flex-col gap-[48px]">
             <h2 className="text-[48px] font-semibold text-gray-900">
               Frequently asked questions

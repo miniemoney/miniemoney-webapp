@@ -1,6 +1,6 @@
-const Section = ({children, className}: {children: JSX.Element, className: string}) => {
+const Section = ({id, children, className}: {children: JSX.Element, className: string, id?: string}) => {
     return (
-      <section className={`w-full ${className}`}>
+      <section id={id} className={`w-full ${className}`}>
         <div className="w-full max-w-[960px] mx-auto">{children}</div>
       </section>
     );

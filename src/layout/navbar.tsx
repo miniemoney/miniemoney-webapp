@@ -19,6 +19,12 @@ const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
+  const handleFaqScroll = (e: React.MouseEvent<HTMLParagraphElement>) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById("faq");
+    aboutSection?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav className="z-30 fixed top-0 left-0 w-full p-[20px] bg-white">
       <div className="w-full max-w-[960px] mx-auto flex items-center justify-between">
@@ -150,7 +156,7 @@ const Navbar = () => {
                           FAQ
                         </div>
                       ),
-                      onClick: () => {},
+                      onClick: handleFaqScroll,
                     },
                     {
                       id: 2,
