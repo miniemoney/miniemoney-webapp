@@ -41,7 +41,7 @@ const Navbar = () => {
                           About us
                         </div>
                       ),
-                      onClick: () => {},
+                      onClick: () => {navigate("/about-us");},
                     },
                     {
                       id: 2,
