@@ -187,20 +187,19 @@ const AboutUs = () => {
             </div>
             <div className="p-8 bg-white flex flex-col gap-2 w-[600px]">
               <h3 className="text-[30px] md:text-[36px] font-semibold text-gray-900">
-                Learning about money is a very important life skill.
+                Founded by a parent
               </h3>
               <div className="flex flex-col gap-4">
                 <p className="md:text-sm text-gray-600">
-                  Kids begin to form lifelong habits from as early as 7 years
-                  old, so why not take the opportunity to start teaching your
-                  kids about money as early as possible? Just like every skill
-                  or habit we have picked up, we learnt them by doing it over
-                  and over again.
+                  MinieMoney was founded by a father of three and a seasoned
+                  business developer with a strong academic background and a
+                  global career spanning multiple cities.
                 </p>
                 <p className="md:text-sm text-gray-600">
-                  With MinieMoney, they get to understand money by practising
-                  and having control of the money they spend, save, and earn
-                  with the guidance of their parents.
+                  With a BSc in Insurance and an MSc in Global Business, he
+                  combines expertise with a passion for turning ideas into
+                  rewarding ventures—building a smarter financial future for the
+                  next generation.
                 </p>
               </div>
             </div>
