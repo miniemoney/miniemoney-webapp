@@ -138,8 +138,8 @@ const AboutUs = () => {
         </Section>
         <Section className="px-5 py-[80px] md:py-[120px] bg-white">
           <div className="flex gap-8 md:gap-12 items-center flex-wrap md:flex-nowrap">
-            <div className="flex flex-col gap-4 w-full md:w-[420px]">
-              <div className="grid grid-cols-5 items-stretch gap-4 w-full">
+            <div className="flex flex-col gap-4 w-full ">
+              <div className="grid grid-cols-5 items-stretch gap-4 w-full md:w-[420px]">
                 <div className="flex flex-col gap-4 h-full col-span-2">
                   <img src={AboutUs3} alt="" className="flex-grow" />
                   <img src={AboutUs5} alt="" className="flex-grow" />
@@ -151,7 +151,7 @@ const AboutUs = () => {
               </div>
               <img src={AboutUs7} alt="" className="col-span-5" />
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 ">
               <h3 className="text-[30px] md:text-[36px] font-semibold text-gray-900">
                 We are building a community of parents wey sabi!
               </h3>

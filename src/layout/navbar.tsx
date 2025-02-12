@@ -247,7 +247,7 @@ const Navbar = () => {
                           About us
                         </div>
                       ),
-                      onClick: () => {},
+                      onClick: () => {navigate("/about-us");},
                     },
                     {
                       id: 2,
@@ -352,7 +352,7 @@ const Navbar = () => {
                           FAQ
                         </div>
                       ),
-                      onClick: () => {},
+                      onClick: handleFaqScroll,
                     },
                     {
                       id: 2,

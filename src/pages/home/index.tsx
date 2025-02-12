@@ -60,7 +60,7 @@ const Home = () => {
                 <div className="w-full z-20 bg-Primary-500 rounded-4xl flex items-center justify-between">
                   <button
                     onClick={() => setShowModal(true)}
-                    className="hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                    className="hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl h-full"
                   >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}
