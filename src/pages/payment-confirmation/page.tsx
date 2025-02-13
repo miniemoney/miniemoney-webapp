@@ -4,20 +4,61 @@ import bgPattern from "/Miniemoney_Pattern.png";
 import Noise from "/Noise.png";
 import { LuMail } from "react-icons/lu";
 // import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 import Spinner from "../../components/Spinner/Spinner";
 import { AppleStoreIcon, Logo, NigerianFlag, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
 import PopupModal from "../../components/popupModal";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const PaymentConfirmationPage = () => {
-  // const [confirmationStatus, setConfirmationStatus] = useState("success");
-  var confirmationStatus = "success";
-  // const [confirming, setConfirming] = useState(false);
-  const confirming = false
+  const [confirmationStatus, setConfirmationStatus] = useState("success");
+  
+  const [confirming, setConfirming] = useState(false);
+  
   const navigate = useNavigate();
 
-  // const [searchParams, setSearchParams] = useSearchParams();
-  // const reference = searchParams.get("reference");
+  const [searchParams] = useSearchParams();
+  const reference = searchParams.get("reference");
+
+  const callWebHook =  () => {
+    fetch(`https://bankingapi.miniemoney.com/paystack-webhook`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  }
+
+  useEffect(() => {
+    if (reference) {
+      setConfirming(true)
+      fetch(`https://bankingapi.miniemoney.com/verify-payment/${reference}`, {
+        method: "GET",
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          callWebHook()
+          setConfirming(false);
+          setConfirmationStatus("success");
+        })
+        .catch((error) => {
+          toast.error(error.message);
+        });
+    }
+  }, [])
   return (
     <main>
       {confirming ? (
@@ -38,10 +79,10 @@ const PaymentConfirmationPage = () => {
               type: "success",
               confirmText: "Done",
               confirmAction: () => {
-                navigate("/");
+                navigate("/gifting");
               },
               close: () => {
-                navigate("/");
+                navigate("/gifting");
               },
             }}
           />
@@ -57,10 +98,10 @@ const PaymentConfirmationPage = () => {
               type: "error",
               confirmText: "Try again",
               confirmAction: () => {
-                navigate("/");
+                navigate("/gifting");
               },
               close: () => {
-                navigate("/");
+                navigate("/gifting");
               },
             }}
           />
