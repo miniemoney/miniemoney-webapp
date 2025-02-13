@@ -58,7 +58,7 @@ const PaymentConfirmationPage = () => {
           toast.error(error.message);
         });
     }
-  }, [])
+  }, [reference])
   return (
     <main>
       {confirming ? (
