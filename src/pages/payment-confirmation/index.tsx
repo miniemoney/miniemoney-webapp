@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const PaymentConfirmationPage = () => {
-  const [confirmationStatus, setConfirmationStatus] = useState("success");
+  const [confirmationStatus, setConfirmationStatus] = useState("");
   
   const [confirming, setConfirming] = useState(false);
   
@@ -38,7 +38,7 @@ const PaymentConfirmationPage = () => {
         toast.error(error.message);
       });
   }
-  
+
   const verifyPayment = async (reference: string) => {
     setConfirming(true)
 
@@ -47,9 +47,6 @@ const PaymentConfirmationPage = () => {
         `https://bankingapi.miniemoney.com/verify-payment/${reference}`,
         {
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
         }
       )
         .then((response) => {
@@ -74,7 +71,6 @@ const PaymentConfirmationPage = () => {
   useEffect(() => {
     if (reference) {
       verifyPayment(reference);
-      
     }
     
   }, [])
@@ -108,7 +104,7 @@ const PaymentConfirmationPage = () => {
           {/* error modal */}
           <PopupModal
             type="alert"
-            show={confirmationStatus === "error"}
+            show={confirmationStatus === "failed"}
             close={() => {}}
             standardContentProps={{
               title: "Gifting failed!",
@@ -198,8 +194,18 @@ const PaymentConfirmationPage = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2 mt-6">
-                      <AppleStoreIcon />
-                      <PlayStoreIcon />
+                      <a
+                        href="https://apps.apple.com/ng/app/miniemoney/id6670430893"
+                        target="_blank"
+                      >
+                        <AppleStoreIcon className="cursor-pointer" />
+                      </a>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.minimoney.minie_money&hl=en&pli=1"
+                        target="_blank"
+                      >
+                        <PlayStoreIcon className="cursor-pointer" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -308,8 +314,18 @@ const PaymentConfirmationPage = () => {
                       <hr className="flex-grow border-t-1 border-dashed border-gray-300" />
                     </div>
                     <div className="flex items-center justify-center w-full gap-2 py-3 px-5">
-                      <AppleStoreIcon />
-                      <PlayStoreIcon />
+                      <a
+                        href="https://apps.apple.com/ng/app/miniemoney/id6670430893"
+                        target="_blank"
+                      >
+                        <AppleStoreIcon className="cursor-pointer" />
+                      </a>
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.minimoney.minie_money&hl=en&pli=1"
+                        target="_blank"
+                      >
+                        <PlayStoreIcon className="cursor-pointer" />
+                      </a>
                     </div>
                   </div>
                 </div>

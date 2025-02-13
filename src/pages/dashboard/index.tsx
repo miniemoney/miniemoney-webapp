@@ -129,8 +129,18 @@ const Dashboard = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mt-6">
-                  <AppleStoreIcon />
-                  <PlayStoreIcon />
+                  <a
+                    href="https://apps.apple.com/ng/app/miniemoney/id6670430893"
+                    target="_blank"
+                  >
+                    <AppleStoreIcon className="cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.minimoney.minie_money&hl=en&pli=1"
+                    target="_blank"
+                  >
+                    <PlayStoreIcon className="cursor-pointer" />
+                  </a>
                 </div>
               </div>
             </div>

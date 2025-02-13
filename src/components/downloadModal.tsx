@@ -2,7 +2,14 @@ import { MdOutlineClose } from "react-icons/md";
 import QRCode from "/QR Code.png";
 import { AppleStoreIcon, PlayStoreIcon } from "./customIcon";
 
-const DownloadModal = ({open, onClose}: {open: boolean, onClose: () => void}) => {
+const DownloadModal = ({
+  open,
+  onClose,
+}: {
+  open: boolean;
+  onClose: () => void;
+}) => {
+  
   return (
     <>
       {open && (
@@ -32,8 +39,18 @@ const DownloadModal = ({open, onClose}: {open: boolean, onClose: () => void}) =>
                   Download the app via:
                 </p>
                 <div className="flex items-center justify-center w-full gap-2">
-                  <AppleStoreIcon className="cursor-pointer" />
-                  <PlayStoreIcon className="cursor-pointer" />
+                  <a
+                    href="https://apps.apple.com/ng/app/miniemoney/id6670430893"
+                    target="_blank"
+                  >
+                    <AppleStoreIcon className="cursor-pointer" />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.minimoney.minie_money&hl=en&pli=1"
+                    target="_blank"
+                  >
+                    <PlayStoreIcon className="cursor-pointer" />
+                  </a>
                 </div>
               </div>
             </div>

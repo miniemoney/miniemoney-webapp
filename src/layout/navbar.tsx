@@ -42,7 +42,7 @@ const Navbar = () => {
                     {
                       id: 1,
                       content: (
-                        <div className="flex items-center gap-4 text-gray-900">
+                        <div className="font-nunito flex items-center gap-4 text-gray-900">
                           <TbUserSquareRounded className="text-Primary-500 w-6 h-6" />
                           About us
                         </div>
@@ -54,7 +54,7 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="font-nunito flex items-center gap-4">
                           <IoBookOutline className="text-Primary-500 w-6 h-6" />
                           Career
                         </div>
@@ -74,7 +74,7 @@ const Navbar = () => {
               }
             >
               <li className="py-[10px] px-4 rounded-4xl">
-                <p className="text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+                <p className="font-nunito text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
                   Company
                 </p>
               </li>
@@ -93,10 +93,10 @@ const Navbar = () => {
                             <VscLink className="text-Primary-500 w-6 h-6" />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <p className="text-semibold text-gray-900">
+                            <p className="font-nunito text-semibold text-gray-900">
                               MinieLink
                             </p>
-                            <p className="text-sm text-gray-600">
+                            <p className="font-nunito text-sm text-gray-600">
                               Receive money easily with a personalized link.
                             </p>
                           </div>
@@ -112,10 +112,10 @@ const Navbar = () => {
                             <GoGift className="text-Primary-500 w-6 h-6" />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <p className="text-semibold text-gray-900">
+                            <p className="font-nunito text-semibold text-gray-900">
                               Gifting
                             </p>
-                            <p className="text-sm text-gray-600">
+                            <p className="font-nunito text-sm text-gray-600">
                               Support your loved ones’ savings with a thoughtful
                               cash gift.
                             </p>
@@ -130,7 +130,7 @@ const Navbar = () => {
                     <p
                       key={item.id}
                       onClick={item.onClick}
-                      className="cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
+                      className="font-nunito cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
                     </p>
@@ -153,7 +153,7 @@ const Navbar = () => {
                     {
                       id: 1,
                       content: (
-                        <div className="flex items-center gap-4 text-gray-900">
+                        <div className="font-nunito flex items-center gap-4 text-gray-900">
                           <MenuBoard className="text-Primary-500 w-6 h-6" />
                           FAQ
                         </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="font-nunito flex items-center gap-4">
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
                         </div>
@@ -173,7 +173,7 @@ const Navbar = () => {
                     {
                       id: 3,
                       content: (
-                        <div className="flex  items-center gap-4">
+                        <div className="font-nunito flex  items-center gap-4">
                           <ClipBoardIcon className="text-Primary-500 w-6 h-6" />
                           Blog
                         </div>
@@ -184,7 +184,7 @@ const Navbar = () => {
                     <p
                       key={item.id}
                       onClick={item.onClick}
-                      className="cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
+                      className="font-nunito cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
                     </p>
@@ -201,7 +201,7 @@ const Navbar = () => {
           </ul>
           <button
             onClick={() => setShowModal(true)}
-            className="flex items-center gap-2 bg-Primary-500 hover:bg-Primary-600 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+            className="font-nunito flex items-center gap-2 bg-Primary-500 hover:bg-Primary-600 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
           >
             <span className="flex items-center gap-[6px] text-white">
               <AiFillApple className="text-white w-4 h-4" /> |{" "}
@@ -242,17 +242,19 @@ const Navbar = () => {
                     {
                       id: 1,
                       content: (
-                        <div className="flex items-center gap-4 text-gray-900">
+                        <div className="font-nunito flex items-center gap-4 text-gray-900">
                           <TbUserSquareRounded className="text-Primary-500 w-6 h-6" />
                           About us
                         </div>
                       ),
-                      onClick: () => {navigate("/about-us");},
+                      onClick: () => {
+                        navigate("/about-us");
+                      },
                     },
                     {
                       id: 2,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="font-nunito flex items-center gap-4">
                           <IoBookOutline className="text-Primary-500 w-6 h-6" />
                           Career
                         </div>
@@ -271,7 +273,7 @@ const Navbar = () => {
                 </div>
               }
             >
-              <p className="flex items-start text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <p className="font-nunito flex items-start text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
                 Company
               </p>
             </MobileDropdownButton>
@@ -289,10 +291,10 @@ const Navbar = () => {
                             <VscLink className="text-Primary-500 w-6 h-6" />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <p className="text-semibold text-gray-900">
+                            <p className="font-nunito text-semibold text-gray-900">
                               MinieLink
                             </p>
-                            <p className="text-sm text-gray-600">
+                            <p className="font-nunito text-sm text-gray-600">
                               Receive money easily with a personalized link.
                             </p>
                           </div>
@@ -308,10 +310,10 @@ const Navbar = () => {
                             <GoGift className="text-Primary-500 w-6 h-6" />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <p className="text-semibold text-gray-900">
+                            <p className="font-nunito text-semibold text-gray-900">
                               Gifting
                             </p>
-                            <p className="text-sm text-gray-600">
+                            <p className="font-nunito text-sm text-gray-600">
                               Support your loved ones’ savings with a thoughtful
                               cash gift.
                             </p>
@@ -326,7 +328,7 @@ const Navbar = () => {
                     <p
                       key={item.id}
                       onClick={item.onClick}
-                      className="cursor-pointer px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
+                      className="font-nunito cursor-pointer px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
                     </p>
@@ -347,7 +349,7 @@ const Navbar = () => {
                     {
                       id: 1,
                       content: (
-                        <div className="flex items-center gap-4 text-gray-900">
+                        <div className="font-nunito flex items-center gap-4 text-gray-900">
                           <MenuBoard className="text-Primary-500 w-6 h-6" />
                           FAQ
                         </div>
@@ -357,7 +359,7 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="font-nunito flex items-center gap-4">
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
                         </div>
@@ -367,7 +369,7 @@ const Navbar = () => {
                     {
                       id: 3,
                       content: (
-                        <div className="flex items-center gap-4">
+                        <div className="font-nunito flex items-center gap-4">
                           <ClipBoardIcon className="text-Primary-500 w-6 h-6" />
                           Blog
                         </div>
@@ -386,14 +388,14 @@ const Navbar = () => {
                 </div>
               }
             >
-              <p className="text-gray-600 flex items-start font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <p className="font-nunito text-gray-600 flex items-start font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
                 Resources
               </p>
             </MobileDropdownButton>
           </div>
           <button
             onClick={() => setShowModal(true)}
-            className="hover:bg-Primary-600 w-full flex items-center justify-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+            className="font-nunito hover:bg-Primary-600 w-full flex items-center justify-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
           >
             <span className="flex items-center gap-[6px] text-white">
               <AiFillApple className="text-white w-4 h-4" /> |{" "}

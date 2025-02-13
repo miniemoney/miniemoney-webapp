@@ -3,7 +3,7 @@ import { LuChevronDown } from "react-icons/lu";
 
 type Iprops = {
   title: string;
-  description: string;
+  description?: React.ReactNode;
   key: number;
 };
 
@@ -28,13 +28,13 @@ const FaqModal = ({ title, description,  key }: Iprops) => {
   return (
     <div
       key={key}
-      className="lg:py-5 lg:px-6 py-3 px-4 flex items-start gap-6 justify-between rounded-2xl w-inherit bg-gray-50"
+      className="lg:py-5 lg:px-6 py-3 px-4 flex items-start gap-6 justify-between rounded-2xl w-inherit bg-gray-50 h-fit"
     >
       <div className="flex flex-col gap-2 flex-grow">
-        <p className="text-lg font-medium text-gray-900">{title}</p>
+        <p className="font-nunito text-lg font-medium text-gray-900">{title}</p>
         {showText && (
           <p
-            className={`text-gray-600 ${
+            className={`text-gray-600 font-nunito ${
               renderText
                 ? "opacity-100 transition-all"
                 : "opacity-0 -translate-y-10 transition-all"
