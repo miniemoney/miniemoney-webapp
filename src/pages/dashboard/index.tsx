@@ -6,6 +6,8 @@ import Noise from "/Noise.png";
 import { AppleStoreIcon, Logo, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
 import { GiCheckMark } from "react-icons/gi";
 import { LuMail } from "react-icons/lu";
+import { Outlet } from "react-router";
+
 
 export type formValue = {
   amount: string;
@@ -53,6 +55,7 @@ const Dashboard = () => {
     };
     return (
       <main className="w-screen min-h-screen flex">
+        <Outlet />
         <div className="hidden lg:block w-full bg-[#003E99] relative">
           <img
             src={bgPattern}

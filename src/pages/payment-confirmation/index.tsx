@@ -4,7 +4,7 @@ import bgPattern from "/Miniemoney_Pattern.png";
 import Noise from "/Noise.png";
 import { LuMail } from "react-icons/lu";
 // import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router";
 import Spinner from "../../components/Spinner/Spinner";
 import { AppleStoreIcon, Logo, NigerianFlag, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
 import PopupModal from "../../components/popupModal";
@@ -38,16 +38,20 @@ const PaymentConfirmationPage = () => {
         toast.error(error.message);
       });
   }
+  
+  const verifyPayment = async (reference: string) => {
+    setConfirming(true)
 
-  useEffect(() => {
-    if (reference) {
-      setConfirming(true)
-      fetch(`https://bankingapi.miniemoney.com/verify-payment/${reference}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+    try {
+      await fetch(
+        `https://bankingapi.miniemoney.com/verify-payment/${reference}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
         .then((response) => {
           return response.json();
         })
@@ -60,8 +64,20 @@ const PaymentConfirmationPage = () => {
         .catch((error) => {
           toast.error(error.message);
         });
+    } catch (error: any) {
+      toast.error(error.message);
+    } finally {
+      setConfirming(false);
     }
-  }, [reference])
+  }
+
+  useEffect(() => {
+    if (reference) {
+      verifyPayment(reference);
+      
+    }
+    
+  }, [])
   return (
     <main>
       {confirming ? (
