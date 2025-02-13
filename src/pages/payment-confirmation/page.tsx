@@ -4,7 +4,7 @@ import bgPattern from "/Miniemoney_Pattern.png";
 import Noise from "/Noise.png";
 import { LuMail } from "react-icons/lu";
 // import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import Spinner from "../../components/Spinner/Spinner";
 import { AppleStoreIcon, Logo, NigerianFlag, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
 import PopupModal from "../../components/popupModal";
@@ -44,13 +44,16 @@ const PaymentConfirmationPage = () => {
       setConfirming(true)
       fetch(`https://bankingapi.miniemoney.com/verify-payment/${reference}`, {
         method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
         .then((response) => {
           return response.json();
         })
         .then((data) => {
           console.log(data);
-          callWebHook()
+          callWebHook();
           setConfirming(false);
           setConfirmationStatus("success");
         })
