@@ -6,22 +6,28 @@ import { LuMail } from "react-icons/lu";
 // import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router";
 import Spinner from "../../components/Spinner/Spinner";
-import { AppleStoreIcon, Logo, NigerianFlag, PhoneMockup, PlayStoreIcon } from "../../components/customIcon";
+import {
+  AppleStoreIcon,
+  Logo,
+  NigerianFlag,
+  PhoneMockup,
+  PlayStoreIcon,
+} from "../../components/customIcon";
 import PopupModal from "../../components/popupModal";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const PaymentConfirmationPage = () => {
   const [confirmationStatus, setConfirmationStatus] = useState("");
-  
+
   const [confirming, setConfirming] = useState(false);
-  
+
   const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();
   const reference = searchParams.get("reference");
 
-  const callWebHook =  () => {
+  const callWebHook = () => {
     fetch(`https://bankingapi.miniemoney.com/paystack-webhook`, {
       method: "POST",
       headers: {
@@ -37,10 +43,10 @@ const PaymentConfirmationPage = () => {
       .catch((error) => {
         toast.error(error.message);
       });
-  }
+  };
 
   const verifyPayment = async (reference: string) => {
-    setConfirming(true)
+    setConfirming(true);
 
     try {
       await fetch(
@@ -53,10 +59,15 @@ const PaymentConfirmationPage = () => {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
-          callWebHook();
-          setConfirming(false);
-          setConfirmationStatus("success");
+          if (data?.status) {
+            callWebHook();
+            setConfirming(false);
+            setConfirmationStatus(data?.message);
+            console.log(data);
+          } else {
+            setConfirming(false);
+            setConfirmationStatus(data?.message);
+          }
         })
         .catch((error) => {
           toast.error(error.message);
@@ -66,14 +77,13 @@ const PaymentConfirmationPage = () => {
     } finally {
       setConfirming(false);
     }
-  }
+  };
 
   useEffect(() => {
     if (reference) {
       verifyPayment(reference);
     }
-    
-  }, [])
+  }, []);
   return (
     <main>
       {confirming ? (
