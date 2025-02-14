@@ -1,6 +1,7 @@
 import { MdOutlineClose } from "react-icons/md";
-import QRCode from "/QR Code.png";
 import { AppleStoreIcon, PlayStoreIcon } from "./customIcon";
+import QrCode from 'qrcode';
+import { useEffect, useState } from "react";
 
 const DownloadModal = ({
   open,
@@ -10,7 +11,13 @@ const DownloadModal = ({
   onClose: () => void;
 }) => {
   
-  return (
+    const [src, setSrc] = useState<string>('')
+      useEffect(() => {
+          QrCode.toDataURL("https://qrcode.miniemoney.com").then((url) =>
+            setSrc(url)
+          );
+      }, [])
+    return (
     <>
       {open && (
         <div className="z-50 w-screen h-screen fixed top-0 left-0 flex items-center justify-center p-3">
@@ -27,7 +34,7 @@ const DownloadModal = ({
                 <p className="text-gray-600 font-medium">
                   Scan the QR code to download the app
                 </p>
-                <img src={QRCode} alt="" />
+                <img src={src} alt="" />
               </div>
               <div className="flex items-center gap-2">
                 <hr className="flex-grow border-t-1 border-dashed border-gray-300" />

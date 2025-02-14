@@ -63,7 +63,6 @@ const PaymentConfirmationPage = () => {
             callWebHook();
             setConfirming(false);
             setConfirmationStatus(data?.message);
-            console.log(data);
           } else {
             setConfirming(false);
             setConfirmationStatus(data?.message);
