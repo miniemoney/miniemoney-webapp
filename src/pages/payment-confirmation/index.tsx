@@ -38,15 +38,12 @@ const PaymentConfirmationPage = () => {
         }
       )
         .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          if (data?.status) {
+          if (response.status === 200) { 
             setConfirming(false);
-            setConfirmationStatus('success');
+            setConfirmationStatus("success");
           } else {
             setConfirming(false);
-            setConfirmationStatus('failed');
+            setConfirmationStatus("failed");
           }
         })
         .catch((error) => {

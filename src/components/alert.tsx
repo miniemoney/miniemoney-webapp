@@ -13,16 +13,16 @@ const SuccessIcon = () => {
 
 const InfoIcon = () => {
   return (
-    <div className="mb-4 flex h-[64px] w-[64px] items-center justify-center rounded-full border-[10px] border-primary-50 bg-primary-100">
-      <LuInfo className="text-[28px] font-light text-primary-600" />
+    <div className="mb-4 flex h-[64px] w-[64px] items-center justify-center rounded-full border-[10px] border-[#ECF3FD] bg-[#C6DBFB]">
+      <LuInfo className="text-[28px] font-light text-[#005FEB]" />
     </div>
   );
 };
 
 const ErrorIcon = () => {
   return (
-    <div className="mb-4 flex h-[64px] w-[64px] items-center justify-center rounded-full border-[10px] border-error-50 bg-error-100">
-      <BiError className="text-[28px] font-light text-error-600" />
+    <div className="mb-4 flex h-[64px] w-[64px] items-center justify-center rounded-full border-[10px] border-[#ECF3FD] bg-[#C6DBFB]">
+      <BiError className="text-[28px] font-light text-[#005FEB]" />
     </div>
   );
 };
