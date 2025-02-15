@@ -27,24 +27,6 @@ const PaymentConfirmationPage = () => {
   const [searchParams] = useSearchParams();
   const reference = searchParams.get("reference");
 
-  const callWebHook = () => {
-    fetch(`https://bankingapi.miniemoney.com/paystack-webhook`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        toast.error(error.message);
-      });
-  };
-
   const verifyPayment = async (reference: string) => {
     setConfirming(true);
 
@@ -60,12 +42,11 @@ const PaymentConfirmationPage = () => {
         })
         .then((data) => {
           if (data?.status) {
-            callWebHook();
             setConfirming(false);
-            setConfirmationStatus(data?.message);
+            setConfirmationStatus('success');
           } else {
             setConfirming(false);
-            setConfirmationStatus(data?.message);
+            setConfirmationStatus('failed');
           }
         })
         .catch((error) => {
