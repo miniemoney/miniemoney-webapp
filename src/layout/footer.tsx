@@ -1,4 +1,4 @@
-import { FaFacebook, FaGooglePlay, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGooglePlay, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import { AiFillApple, AiFillInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { FooterLogo, FooterWiggle, Logo } from "../components/customIcon";
@@ -9,6 +9,11 @@ import { useState } from "react";
 const Footer = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const today = new Date();
+  const handleFaqScroll = (e: React.MouseEvent<HTMLParagraphElement>) => {
+    e.preventDefault();
+    const aboutSection = document.getElementById("faq");
+    aboutSection?.scrollIntoView({ behavior: "smooth" });
+  };
   // const navigate = useNavigate()
   return (
     <div className="w-full bg-Primary-600 relative">
@@ -23,7 +28,10 @@ const Footer = () => {
                 The money app for teenagers
               </p>
             </div>
-            <button onClick={() => setShowModal(true)} className="font-nunito hover:bg-Primary-50 z-20 flex items-center gap-2 text-Primary-500 bg-white text-sm font-semibold py-[10px] px-4 rounded-4xl">
+            <button
+              onClick={() => setShowModal(true)}
+              className="font-nunito hover:bg-Primary-50 z-20 flex items-center gap-2 text-Primary-500 bg-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+            >
               <span className="flex items-center gap-[6px] text-Primary-500">
                 <AiFillApple className="text-Primary-500 w-4 h-4" /> |{" "}
                 <FaGooglePlay className="text-Primary-500 w-4 h-4" />
@@ -38,12 +46,18 @@ const Footer = () => {
                   Company
                 </p>
                 <div className="font-nunito flex flex-col">
-                  <p className="font-nunito py-2 text-white font-medium">
+                  <a
+                    href="/about-us"
+                    className="font-nunito py-2 text-white font-medium"
+                  >
                     About us
-                  </p>
-                  <p className="font-nunito py-2 text-white font-medium flex items-center gap-1">
+                  </a>
+                  <a
+                    href=""
+                    className="font-nunito py-2 text-white font-medium flex items-center gap-1"
+                  >
                     Career <LuArrowUpRight className="w-5 h-5" />
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex flex-col gap-1">
@@ -51,9 +65,12 @@ const Footer = () => {
                   Products
                 </p>
                 <div className="flex flex-col">
-                  <p className="font-nunito py-2 text-white font-medium cursor-pointer">
+                  <a
+                    href=""
+                    className="font-nunito py-2 text-white font-medium cursor-pointer"
+                  >
                     MinieLink
-                  </p>
+                  </a>
                   <a
                     href="/gifting"
                     className="font-nunito py-2 text-white font-medium flex items-center gap-1 cursor-pointer"
@@ -67,12 +84,18 @@ const Footer = () => {
                   Resources
                 </p>
                 <div className="flex flex-col">
-                  <p className="font-nunito py-2 text-white font-medium">
+                  <div
+                    onClick={handleFaqScroll}
+                    className="cursor-pointer font-nunito py-2 text-white font-medium"
+                  >
                     FAQs
-                  </p>
-                  <p className="font-nunito py-2 text-white font-medium flex items-center gap-1">
+                  </div>
+                  <a
+                    href="https://myminiemoney.medium.com/"
+                    className="font-nunito py-2 text-white font-medium flex items-center gap-1"
+                  >
                     Blog <LuArrowUpRight className="w-5 h-5" />
-                  </p>
+                  </a>
                   <p className="font-nunito py-2 text-white font-medium">
                     Press Kit
                   </p>
@@ -131,28 +154,40 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="/"
+                href="https://facebook.com/miniemoney1"
                 className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaFacebook className="w-4 text-Primary-500" />
               </a>
               <a
-                href="/"
+                href="https://www.instagram.com/myminiemoney/"
                 className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <AiFillInstagram className="w-4 text-Primary-500" />
               </a>
               <a
-                href="/"
+                href="https://www.linkedin.com/company/miniemoney"
                 className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaLinkedin className="w-4 text-Primary-500" />
               </a>
               <a
-                href="/"
+                href="https://x.com/myminiemoney"
                 className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
               >
                 <FaXTwitter className="w-4 text-Primary-500" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@myminiemoney"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+              >
+                <FaTiktok className="w-4 text-Primary-500" />
+              </a>
+              <a
+                href="https://www.youtube.com/@theminiemoneyshow"
+                className="bg-white hover:bg-Primary-50 rounded-full p-2 flex items-center justify-center"
+              >
+                <FaYoutube className="w-4 text-Primary-500" />
               </a>
             </div>
           </div>

@@ -85,19 +85,19 @@ export const faqs = [
   {
     title: "Can kids use MinieMoney without a bank account?",
     description:
-      "Transactions within the app are free but standard charges apply on external transactions. ",
+      "Yes, MinieMoney provides a standalone financial ecosystem for kids, but linking a parent’s account may be required for certain features.",
     id: 7,
   },
   {
     title: "How does MinieMoney teach financial literacy?",
     description:
-      "Yes, MinieMoney provides a standalone financial ecosystem for kids, but linking a parent’s account may be required for certain features.",
+      "MinieMoney incorporates interactive lessons, challenges, and real-world money management experiences to help kids develop smart financial habits.",
     id: 8,
   },
   {
     title: "⁠Are there any fees for using MinieMoney?",
     description:
-      "MinieMoney incorporates interactive lessons, challenges, and real-world money management experiences to help kids develop smart financial habits.",
+      "Transactions within the app are free but standard charges apply on external transactions. ",
     id: 9,
   },
 ];

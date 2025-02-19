@@ -26,7 +26,7 @@ const DownloadModal = ({
             className="absolute top-0 left-0 w-screen h-screen bg-black opacity-40"
           ></div>
           <div className="z-50 flex flex-col gap-6 items-center">
-            <div className="bg-white p-6 md:p-8 rounded-3xl flex flex-col gap-6">
+            <div className="bg-white p-6 md:p-8 rounded-3xl flex flex-col gap-2 md:gap-6">
               <p className="font-semibold text-4xl lg:text-3xl text-center">
                 Get the MinieMoney app
               </p>
@@ -34,7 +34,7 @@ const DownloadModal = ({
                 <p className="text-gray-600 font-medium">
                   Scan the QR code to download the app
                 </p>
-                <img src={src} alt="" />
+                <img src={src} alt="" className="w-full" />
               </div>
               <div className="flex items-center gap-2">
                 <hr className="flex-grow border-t-1 border-dashed border-gray-300" />

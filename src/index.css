@@ -55,7 +55,7 @@
   --font-nunito: "Nunito", sans-serif;
 }
 
-button {
+button, a {
   cursor: pointer;
 }
 .fade {

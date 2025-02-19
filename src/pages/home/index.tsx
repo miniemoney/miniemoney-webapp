@@ -91,13 +91,13 @@ const Home = () => {
                 alt=""
                 className="absolute w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover rounded-3xl"
               />
-              <div className="flex flex-col items-center gap-6 z-20">
+              <div className="relative flex flex-col items-center gap-6 z-20">
                 <img
                   src={moneyAnimation}
                   alt=""
-                  className="z-10 absolute -top-[12px] left-[81px] w-[48px] h-[48px]"
+                  className=" absolute -top-[12px] left-[81px] w-[48px] h-[48px]"
                 />
-                <h1 className="font-intrument-sans w-full max-w-[360px] text-4xl font-semibold text-white text-center">
+                <h1 className="z-10 font-intrument-sans w-full max-w-[360px] text-4xl font-semibold text-white text-center">
                   The money app for <span className="italic">teenagers</span>
                 </h1>
                 <button
@@ -172,8 +172,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-Green-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="p-6 h-fit flex flex-col items-start  border-2 border-Green-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Save smart with KoloSave
                     </h3>
@@ -182,10 +182,10 @@ const Home = () => {
                       KoloSave. Grow your money effortlessly!
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-Green-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-Green-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-Green-200" />
-                      <Wiggle className="fill-Green-200" />
+                      {/* <Wiggle className="fill-Green-200" /> */}
                     </div>
                     <Piggy className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -197,8 +197,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-indigo-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="p-6 h-fit flex flex-col items-start  border-2 border-indigo-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Send and receive money instantly
                     </h3>
@@ -207,10 +207,10 @@ const Home = () => {
                       unique MinieTAG or MinieMoney bank account.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-indigo-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-indigo-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-indigo-200" />
-                      <Wiggle className="fill-indigo-200" />
+                      {/* <Wiggle className="fill-indigo-200" /> */}
                     </div>
                     <MoneyBag className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -222,8 +222,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-cyan-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="p-6 h-fit flex flex-col items-start  border-2 border-cyan-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Get cash gifts the cool way
                     </h3>
@@ -232,10 +232,10 @@ const Home = () => {
                       effortlessly using your MinieTAG or MinieLink.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-cyan-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-cyan-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-cyan-200" />
-                      <Wiggle className="fill-cyan-200" />
+                      {/* <Wiggle className="fill-cyan-200" /> */}
                     </div>
                     <Gift className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -247,8 +247,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-yellow-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="h-fit p-6 flex flex-col items-start  border-2 border-yellow-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Top up and earn with Saveback
                     </h3>
@@ -257,10 +257,10 @@ const Home = () => {
                       automatically saved in your KoloSave wallet.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-yellow-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-yellow-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-yellow-200" />
-                      <Wiggle className="fill-yellow-200" />
+                      {/* <Wiggle className="fill-yellow-200" /> */}
                     </div>
                     <CreditCard className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -272,8 +272,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-moss-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="h-fit p-6 flex flex-col items-start  border-2 border-moss-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Fun financial education
                     </h3>
@@ -282,10 +282,10 @@ const Home = () => {
                       content and live quizzes.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-moss-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-moss-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-moss-200" />
-                      <Wiggle className="fill-moss-200" />
+                      {/* <Wiggle className="fill-moss-200" /> */}
                     </div>
                     <GraduationCap className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -297,8 +297,8 @@ const Home = () => {
                     <img src={PhoneMockup3} alt="" />
                   </div>
                 </div>
-                <div className="flex-grow flex flex-col rounded-[24px] bg-white">
-                  <div className="p-6 flex flex-col items-start  border-2 border-violet-100 rounded-t-[24px] border-b-0">
+                <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
+                  <div className="h-fit p-6 flex flex-col items-start  border-2 border-violet-100 rounded-t-[24px] border-b-0">
                     <h3 className="font-intrument-sans font-semibold text-3xl lg:text-[36px] text-gray-900">
                       Great investment opportunities
                     </h3>
@@ -307,10 +307,10 @@ const Home = () => {
                       market and parental control.
                     </p>
                   </div>
-                  <div className="flex items-center justify-center bg-violet-100 rounded-b-[24px] relative">
+                  <div className="h-full flex items-center justify-center bg-violet-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-violet-200" />
-                      <Wiggle className="fill-violet-200" />
+                      {/* <Wiggle className="fill-violet-200" /> */}
                     </div>
                     <GraphBar className="w-[200px] h-[200px] z-10" />
                   </div>

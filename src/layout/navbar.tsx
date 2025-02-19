@@ -163,10 +163,13 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <div className="font-nunito flex items-center gap-4">
+                        <a
+                          href="https://myminiemoney.medium.com/"
+                          className="font-nunito flex items-center gap-4"
+                        >
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
-                        </div>
+                        </a>
                       ),
                       onClick: () => {},
                     },
@@ -175,7 +178,7 @@ const Navbar = () => {
                       content: (
                         <div className="font-nunito flex  items-center gap-4">
                           <ClipBoardIcon className="text-Primary-500 w-6 h-6" />
-                          Blog
+                          Press Kit
                         </div>
                       ),
                       onClick: () => {},
@@ -359,10 +362,13 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <div className="font-nunito flex items-center gap-4">
+                        <a
+                          href="https://myminiemoney.medium.com/"
+                          className="font-nunito flex items-center gap-4"
+                        >
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
-                        </div>
+                        </a>
                       ),
                       onClick: () => {},
                     },
@@ -371,7 +377,7 @@ const Navbar = () => {
                       content: (
                         <div className="font-nunito flex items-center gap-4">
                           <ClipBoardIcon className="text-Primary-500 w-6 h-6" />
-                          Blog
+                          Press Kit
                         </div>
                       ),
                       onClick: () => {},
