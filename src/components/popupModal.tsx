@@ -5,7 +5,7 @@ import Alert from "./alert";
 export type AlertProps = {
   title: string;
   description?: string;
-  children?: JSX.Element;
+  children?: React.ReactNode;
   type: "success" | "info" | "error";
   confirmText?: string;
   confirmAction?: () => void;

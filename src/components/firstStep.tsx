@@ -1,8 +1,7 @@
-// import { formValue } from "../pages/dashboard/page";
-// import { formatNumberWithCommas } from "../helpers/formatNumber";
-import { formatNumberWithCommas } from "../helpers/formatNumber";
-import { formValue } from "../pages/dashboard";
+
+import { formValue } from "@/app/gifting/page";
 import { AppleStoreIcon, NigerianFlag, PlayStoreIcon } from "./customIcon";
+import { formatNumberWithCommas } from "@/helpers/formatNumber";
 
 const FirstStep = ({
   setStep,

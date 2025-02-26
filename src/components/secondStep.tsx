@@ -1,8 +1,8 @@
 import { IoArrowBack } from "react-icons/io5";
 import { AppleStoreIcon, NigerianFlag, PlayStoreIcon } from "./customIcon";
-import toast from "react-hot-toast";
+import { formValue } from "@/app/gifting/page";
 import { useState } from "react";
-import { formValue } from "../pages/dashboard";
+import toast from "react-hot-toast";
 import Spinner from "./Spinner/Spinner";
 
 const SecondStep = ({
@@ -53,11 +53,15 @@ const SecondStep = ({
           toast.success(data.message);
           window.location.href = data.paymentLink;
         })
-        .catch((error) => {
+        .catch((error: Error) => {
           toast.error(error.message);
         });
-    } catch (error: any) {
-      toast.error(error.message);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }

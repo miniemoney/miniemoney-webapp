@@ -1,27 +1,25 @@
-import { AiFillApple } from "react-icons/ai";
-import Navbar from "../../layout/navbar";
-import Section from "../../layout/section";
-import PhoneMockup5 from "/phone_mockup_5.png";
-import AboutUs1 from "/about_us_1.png";
-import AboutUs2 from "/about_us_2.png";
-import AboutUs3 from "/about_us_3.png";
-import AboutUs4 from "/about_us_4.png";
-import AboutUs5 from "/about_us_5.png";
-import AboutUs6 from "/about_us_6.png";
-import AboutUs7 from "/about_us_7.png";
-import AboutUs8 from "/about_us_8.png";
-import bgPattern from "/Miniemoney_Pattern.png";
-import Noise from "/Noise.png";
-import { FaGooglePlay } from "react-icons/fa";
-import {
-  PhoneMockup,
-  PhoneMockupMobile,
-  WiggleLong,
-} from "../../components/customIcon";
-import DownloadModal from "../../components/downloadModal";
-import Footer from "../../layout/footer";
+"use client"
+
+import { PhoneMockup, PhoneMockupMobile, WiggleLong } from "@/components/customIcon";
+import DownloadModal from "@/components/downloadModal";
+import Footer from "@/layout/footer";
+import Navbar from "@/layout/navbar"
+import Section from "@/layout/section";
 import { useState } from "react";
-import moneyAnimation from "/money-animation.gif";
+import { AiFillApple } from "react-icons/ai";
+import { FaGooglePlay } from "react-icons/fa";
+import AboutUs1 from "../../../public/about_us_1.png";
+import AboutUs2 from "../../../public/about_us_2.png";
+import AboutUs3 from "../../../public/about_us_3.png";
+import AboutUs4 from "../../../public/about_us_4.png";
+import AboutUs5 from "../../../public/about_us_5.png";
+import AboutUs6 from "../../../public/about_us_6.png";
+import AboutUs7 from "../../../public/about_us_7.png";
+import AboutUs8 from "../../../public/about_us_8.png";
+import bgPattern from "../../../public/Miniemoney_Pattern.png";
+import moneyAnimation from "../../../public/money-animation.gif";
+import PhoneMockup5 from "../../../public/phone_mockup_5.png";
+import Noise from "../../../public/Noise.png";
 
 const AboutUs = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -59,19 +57,19 @@ const AboutUs = () => {
                 </p>
                 <div className="relative bg-Primary-700 pt-8 px-12 rounded-2xl w-full ">
                   <img
-                    src={bgPattern}
+                    src={bgPattern.src}
                     alt=""
                     className="absolute w-full h-full top-0 right-0 opacity-30 text-primary-600 object-cover rounded-3xl"
                   />
                   <img
-                    src={Noise}
+                    src={Noise.src}
                     alt=""
                     className="absolute w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover rounded-3xl"
                   />
                   <div className="h-6 absolute bottom-0 left-0 w-full bg-Primary-500 rounded-b-2xl"></div>
                   <div className="z-20 flex items-start justify-between relative">
                     <img
-                      src={moneyAnimation}
+                      src={moneyAnimation.src}
                       alt=""
                       className="z-10 absolute -top-[7px] left-[57px] w-[24px] h-[24px]"
                     />
@@ -80,7 +78,7 @@ const AboutUs = () => {
                       <span className="italic">teenagers</span>
                     </h1>
                     <div className="z-20">
-                      <img src={PhoneMockup5} alt="" />
+                      <img src={PhoneMockup5.src} alt="" />
                     </div>
                   </div>
                 </div>
@@ -116,14 +114,14 @@ const AboutUs = () => {
               </div>
             </div>
             <div className="rounded-3xl w-full p-6 bg-Primary-100">
-              <img src={AboutUs1} alt="" />
+              <img src={AboutUs1.src} alt="" />
             </div>
           </div>
         </Section>
         <Section className="px-5 py-[80px] md:py-[120px] bg-cyan-25">
           <div className="flex items-stretch w-full flex-wrap md:flex-nowrap">
             <div className="p-6 rounded-3xl md:rounded-l-3xl bg-cyan-200 flex-grow">
-              <img src={AboutUs2} alt="" className="w-full h-full" />
+              <img src={AboutUs2.src} alt="" className="w-full h-full" />
             </div>
             <div className="p-8 bg-white flex flex-col gap-2 w-full md:w-[520px]">
               <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
@@ -151,15 +149,15 @@ const AboutUs = () => {
             <div className="flex flex-col gap-4 w-full ">
               <div className="grid grid-cols-5 items-stretch gap-4 w-full md:w-[420px]">
                 <div className="flex flex-col gap-4 h-full col-span-2">
-                  <img src={AboutUs3} alt="" className="flex-grow" />
-                  <img src={AboutUs5} alt="" className="flex-grow" />
+                  <img src={AboutUs3.src} alt="" className="flex-grow" />
+                  <img src={AboutUs5.src} alt="" className="flex-grow" />
                 </div>
                 <div className="flex flex-col gap-4 col-span-3">
-                  <img src={AboutUs4} alt="" className="col-span-3" />
-                  <img src={AboutUs6} alt="" className="col-span-3" />
+                  <img src={AboutUs4.src} alt="" className="col-span-3" />
+                  <img src={AboutUs6.src} alt="" className="col-span-3" />
                 </div>
               </div>
-              <img src={AboutUs7} alt="" className="col-span-5" />
+              <img src={AboutUs7.src} alt="" className="col-span-5" />
             </div>
             <div className="flex flex-col gap-3 ">
               <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
@@ -193,7 +191,7 @@ const AboutUs = () => {
         <Section className="px-5 py-[80px] md:py-[120px] bg-white">
           <div className="flex items-stretch w-full flex-wrap md:flex-nowrap">
             <div className="p-6 order-2 rounded-b-3xl md:rounded-r-3xl bg-Purple-200 flex-grow ">
-              <img src={AboutUs8} alt="" className="w-full h-full" />
+              <img src={AboutUs8.src} alt="" className="w-full h-full" />
             </div>
             <div className="p-8 bg-white flex flex-col gap-2 w-[600px]">
               <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
@@ -228,7 +226,7 @@ const AboutUs = () => {
                   with us today!{" "}
                   <button
                     onClick={() => setShowModal(true)}
-                    className="font-nunito hover:bg-Primary-600 flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                    className="font-nunito hover:bg-Primary-600 flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-[32px]"
                   >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}

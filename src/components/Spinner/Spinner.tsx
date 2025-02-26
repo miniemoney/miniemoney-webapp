@@ -1,5 +1,7 @@
-import './Spinner.css'
+import styles from './Spinner.module.css'
 
 export default function Spinner ({ className}: {className?: string}) {
-    return <div className={`spinner ${className}`}></div>;
+    return (
+      <div className={`${styles["spinner"]} ${styles[`${className}`]}`}></div>
+    );
 }

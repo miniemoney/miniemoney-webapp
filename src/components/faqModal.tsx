@@ -47,7 +47,10 @@ const FaqModal = ({ title, description,  key }: Iprops) => {
       <LuChevronDown
         onClick={() => setOpenText((state) => !state)}
         className="min-w-6 min-h-5 text-grey-400 cursor-pointer"
-        style={{ transform: showText ? "rotate(180deg)" : "rotate(0deg)" }}
+        style={{
+          transform: showText ? "rotate(180deg)" : "rotate(0deg)",
+          transition: "all 0.3s",
+        }}
       />
     </div>
   );

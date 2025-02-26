@@ -1,19 +1,19 @@
 // import { useState, useEffect } from 'react';
 // import { StaticImageData } from "next/image";
-import './component.css'
+import style from './component.module.css'
 
 const Carousel = ({
   items,
 }: {
-  items: JSX.Element[];
+  items: React.ReactNode[];
 }) => {
   // console.log(items)
   return (
-    <div className='carousel'>
-      <div className="carousel-container ">
-        <div className="carousel-track">
+    <div className={style["carousel"]}>
+      <div className={style["carousel-container"]}>
+        <div className={style["carousel-track"]}>
           {items.map((item, index) => (
-            <div className="carousel-image-container" key={index}>
+            <div className={style["carousel-image-container"]} key={index}>
               {item}
             </div>
           ))}

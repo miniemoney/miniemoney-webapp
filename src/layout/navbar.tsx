@@ -1,23 +1,22 @@
-import { AiFillApple, AiOutlineClose } from "react-icons/ai";
-import { ClipBoardIcon, Logo, MenuBoard } from "../components/customIcon";
-import { FaGooglePlay } from "react-icons/fa";
-import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { ClipBoardIcon, Logo, MenuBoard } from "@/components/customIcon";
+import DownloadModal from "@/components/downloadModal";
+import DropdownButton, { MobileDropdownButton } from "@/components/DropdownButton";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import DropdownButton, {
-  MobileDropdownButton,
-} from "../components/DropdownButton";
-import { TbUserSquareRounded } from "react-icons/tb";
-import { IoBookOutline } from "react-icons/io5";
-import { VscLink } from "react-icons/vsc";
+import { AiFillApple, AiOutlineClose } from "react-icons/ai";
+import { FaGooglePlay } from "react-icons/fa";
 import { GoGift } from "react-icons/go";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { IoBookOutline } from "react-icons/io5";
 import { LuBookText } from "react-icons/lu";
-import { useNavigate } from "react-router";
-import DownloadModal from "../components/downloadModal";
+import { TbUserSquareRounded } from "react-icons/tb";
+import { VscLink } from "react-icons/vsc";
 
 const Navbar = () => {
   const [showSide, setShowSide] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleFaqScroll = (e: React.MouseEvent<HTMLParagraphElement>) => {
     e.preventDefault();
@@ -26,11 +25,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-30 fixed top-0 left-0 w-full p-[20px] bg-white">
+    <nav
+      className="z-50 fixed top-0 left-0 w-full p-[20px] bg-white"
+      style={{ padding: "20px" }}
+    >
       <div className="w-full max-w-[960px] mx-auto flex items-center justify-between">
-        <a href="/" className="cursor-pointer">
+        <Link href="/" className="cursor-pointer">
           <Logo className="text-Primary-500" />
-        </a>
+        </Link>
         <div className="md:flex items-center gap-8 hidden">
           <ul className="flex">
             <DropdownButton
@@ -48,7 +50,7 @@ const Navbar = () => {
                         </div>
                       ),
                       onClick: () => {
-                        navigate("/about-us");
+                        router.push("/about-us");
                       },
                     },
                     {
@@ -73,8 +75,8 @@ const Navbar = () => {
                 </div>
               }
             >
-              <li className="py-[10px] px-4 rounded-4xl">
-                <p className="font-nunito text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <li className="py-[10px] px-4 rounded-[32px]">
+                <p className="font-nunito text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                   Company
                 </p>
               </li>
@@ -123,7 +125,7 @@ const Navbar = () => {
                         </div>
                       ),
                       onClick: () => {
-                        navigate("/gifting");
+                        router.push("/gifting");
                       },
                     },
                   ].map((item) => (
@@ -138,8 +140,8 @@ const Navbar = () => {
                 </div>
               }
             >
-              <li className="py-[10px] px-4 rounded-4xl">
-                <p className="text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <li className="py-[10px] px-4 rounded-[32px]">
+                <p className="text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                   Products
                 </p>
               </li>
@@ -163,13 +165,13 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <a
+                        <Link
                           href="https://myminiemoney.medium.com/"
                           className="font-nunito flex items-center gap-4"
                         >
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
-                        </a>
+                        </Link>
                       ),
                       onClick: () => {},
                     },
@@ -195,8 +197,8 @@ const Navbar = () => {
                 </div>
               }
             >
-              <li className="py-[10px] px-4 rounded-4xl">
-                <p className="text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <li className="py-[10px] px-4 rounded-[32px]">
+                <p className="text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                   Resources
                 </p>
               </li>
@@ -204,7 +206,7 @@ const Navbar = () => {
           </ul>
           <button
             onClick={() => setShowModal(true)}
-            className="font-nunito flex items-center gap-2 bg-Primary-500 hover:bg-Primary-600 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+            className="font-nunito flex items-center gap-2 bg-Primary-500 hover:bg-Primary-600 text-white text-sm font-semibold py-[10px] px-4 rounded-[32px]"
           >
             <span className="flex items-center gap-[6px] text-white">
               <AiFillApple className="text-white w-4 h-4" /> |{" "}
@@ -213,7 +215,7 @@ const Navbar = () => {
             Download app
           </button>
         </div>
-        <div className="rounded-full p-[10px] border border-Primary-400 cursor-pointer block md:hidden">
+        <div className="block md:hidden rounded-full p-[10px] border border-Primary-400 cursor-pointer ">
           <HiOutlineMenuAlt3
             className="text-Primary-500"
             onClick={() => setShowSide(true)}
@@ -223,11 +225,12 @@ const Navbar = () => {
           className={`p-4 flex flex-col gap-6 md:hidden fixed top-0 left-0 w-screen h-screen z-40 bg-white ${
             showSide ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out`}
+          style={{ transform: showSide ? "translateX(0)" : "translateX(100%)" }}
         >
           <div className="flex items-center justify-between">
-            <a href="/" className="cursor-pointer">
+            <Link href="/" className="cursor-pointer">
               <Logo className="text-Primary-500" />
-            </a>
+            </Link>
             <div className="rounded-full p-[10px] border border-Primary-400 cursor-pointer">
               <AiOutlineClose
                 className="text-Primary-500"
@@ -251,7 +254,7 @@ const Navbar = () => {
                         </div>
                       ),
                       onClick: () => {
-                        navigate("/about-us");
+                        router.push("/about-us");
                       },
                     },
                     {
@@ -265,18 +268,18 @@ const Navbar = () => {
                       onClick: () => {},
                     },
                   ].map((item) => (
-                    <p
+                    <div
                       key={item.id}
                       onClick={item.onClick}
                       className="cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
-                    </p>
+                    </div>
                   ))}
                 </div>
               }
             >
-              <p className="font-nunito flex items-start text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <p className="font-nunito flex items-start text-gray-600 font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                 Company
               </p>
             </MobileDropdownButton>
@@ -324,22 +327,22 @@ const Navbar = () => {
                         </div>
                       ),
                       onClick: () => {
-                        navigate("/gifting");
+                        router.push("/gifting");
                       },
                     },
                   ].map((item) => (
-                    <p
+                    <div
                       key={item.id}
                       onClick={item.onClick}
                       className="font-nunito cursor-pointer px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
-                    </p>
+                    </div>
                   ))}
                 </div>
               }
             >
-              <p className="text-gray-600 w-full flex items-start font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <p className="text-gray-600 w-full flex items-start font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                 Products
               </p>
             </MobileDropdownButton>
@@ -362,13 +365,13 @@ const Navbar = () => {
                     {
                       id: 2,
                       content: (
-                        <a
+                        <Link
                           href="https://myminiemoney.medium.com/"
                           className="font-nunito flex items-center gap-4"
                         >
                           <LuBookText className="text-Primary-500 w-6 h-6" />
                           Blog
-                        </a>
+                        </Link>
                       ),
                       onClick: () => {},
                     },
@@ -383,25 +386,25 @@ const Navbar = () => {
                       onClick: () => {},
                     },
                   ].map((item) => (
-                    <p
+                    <div
                       key={item.id}
                       onClick={item.onClick}
                       className="cursor-pointer text-nowrap px-3 py-[10px] text-sm font-medium hover:bg-gray-100"
                     >
                       {item.content}
-                    </p>
+                    </div>
                   ))}
                 </div>
               }
             >
-              <p className="font-nunito text-gray-600 flex items-start font-semibold text-sm py-[10px] px-4 rounded-4xl focus:bg-gray-50">
+              <p className="font-nunito text-gray-600 flex items-start font-semibold text-sm py-[10px] px-4 rounded-[32px] focus:bg-gray-50">
                 Resources
               </p>
             </MobileDropdownButton>
           </div>
           <button
             onClick={() => setShowModal(true)}
-            className="font-nunito hover:bg-Primary-600 w-full flex items-center justify-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+            className="font-[font-family: var(--font-nunito)] hover:bg-Primary-600 w-full flex items-center justify-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-[32px]"
           >
             <span className="flex items-center gap-[6px] text-white">
               <AiFillApple className="text-white w-4 h-4" /> |{" "}

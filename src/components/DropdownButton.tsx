@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
+import useOutsideClick from "@/hooks/useOutsideClick";
+import { DropdownButtonProps } from "@/types/button";
+import { useRef, useState } from "react";
 import CustomButton from "./CustomButton";
-import { DropdownButtonProps } from "../types/button";
-import useOutsideClick from "../hooks/useOutsideClick";
+
 
 function DropdownButton({
   dropdownContent,
@@ -33,7 +34,11 @@ function DropdownButton({
       <CustomButton
         {...customButtonProps}
         onClick={() => {
-          showDropdown ? closeDropdown() : openDropdown();
+          if (showDropdown) {
+            closeDropdown();
+          } else {
+            openDropdown();
+          }
         }}
       />
       {showDropdown && (
@@ -81,7 +86,11 @@ export function MobileDropdownButton({
       <CustomButton
         {...customButtonProps}
         onClick={() => {
-          showDropdown ? closeDropdown() : openDropdown();
+          if (showDropdown) {
+            closeDropdown();
+          } else {
+            openDropdown();
+          }
         }}
       />
       {showDropdown && (

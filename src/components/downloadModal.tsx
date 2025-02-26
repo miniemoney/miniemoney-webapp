@@ -2,6 +2,7 @@ import { MdOutlineClose } from "react-icons/md";
 import { AppleStoreIcon, PlayStoreIcon } from "./customIcon";
 import QrCode from 'qrcode';
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const DownloadModal = ({
   open,
@@ -46,18 +47,18 @@ const DownloadModal = ({
                   Download the app via:
                 </p>
                 <div className="flex items-center justify-center w-full gap-2">
-                  <a
+                  <Link
                     href="https://apps.apple.com/ng/app/miniemoney/id6670430893"
                     target="_blank"
                   >
                     <AppleStoreIcon className="cursor-pointer" />
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://play.google.com/store/apps/details?id=com.minimoney.minie_money&hl=en&pli=1"
                     target="_blank"
                   >
                     <PlayStoreIcon className="cursor-pointer" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

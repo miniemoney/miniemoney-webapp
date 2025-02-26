@@ -1,42 +1,30 @@
-import { AiFillApple } from "react-icons/ai";
-import Navbar from "../../layout/navbar";
-import Section from "../../layout/section";
-import bgPattern from "/Miniemoney_Pattern.png";
-import Noise from "/Noise.png";
-import PhoneMockup2 from "/phone_mockup_2.png";
-import PhoneMockup3 from "/phone_mockup_3.png";
-import DotPattern from "/dot_pattern.png";
-import image1 from "/Image_1.png";
-import image2 from "/Image_2.png";
-import image3 from "/Image_3.png";
-import moneyAnimation from "/money-animation.gif";
-import { FaGooglePlay } from "react-icons/fa";
-import {
-  CreditCard,
-  Gift,
-  GraduationCap,
-  GraphBar,
-  MoneyBag,
-  PhoneMockup,
-  PhoneMockupMobile,
-  Piggy,
-  Shield,
-  Wiggle,
-  WiggleLong,
-} from "../../components/customIcon";
-import Carousel from "../../components/carousel";
-import "../../index.css";
-import { useState } from "react";
-import { faqs, items, testimonials } from "./data";
-import FaqModal from "../../components/faqModal";
-import Footer from "../../layout/footer";
-import DownloadModal from "../../components/downloadModal";
+"use client"
 
-const Home = () => {
+import Navbar from "@/layout/navbar";
+import Section from "@/layout/section";
+import bgPattern from "../../public/Miniemoney_Pattern.png";
+import Noise from "../../public/Noise.png";
+import PhoneMockup2 from "../../public/phone_mockup_2.png";
+import PhoneMockup3 from "../../public/phone_mockup_3.png";
+import DotPattern from "../../public/dot_pattern.png";
+import image1 from "../../public/Image_1.png";
+import image2 from "../../public/Image_2.png";
+import image3 from "../../public/Image_3.png";
+import moneyAnimation from "../../public/money-animation.gif";
+import { useState } from "react";
+import { AiFillApple } from "react-icons/ai";
+import { FaGooglePlay } from "react-icons/fa";
+import { CreditCard, Gift, GraduationCap, GraphBar, MoneyBag, PhoneMockup, PhoneMockupMobile, Piggy, Shield, Wiggle, WiggleLong } from "@/components/customIcon";
+import Carousel from "@/components/carousel";
+import { faqs, items, testimonials } from "./data";
+import FaqModal from "@/components/faqModal";
+import Footer from "@/layout/footer";
+import DownloadModal from "@/components/downloadModal";
+
+export default function Home() {
   const [currrentBackground, setCurrentbackground] =
     useState<string>("#D2F3E3");
   const [showModal, setShowModal] = useState<boolean>(false);
-
   return (
     <div className="relative w-screen">
       <Navbar />
@@ -45,28 +33,28 @@ const Home = () => {
           <div className="flex flex-col gap-[64px] lg:gap-[100px] ">
             <div className="relative bg-Primary-700 p-[80px] rounded-3xl w-full max-w-[960px] hidden lg:block">
               <img
-                src={bgPattern}
+                src={bgPattern.src}
                 alt=""
                 className="absolute w-full h-full top-0 right-0 opacity-30 text-primary-600 object-cover rounded-3xl"
               />
               <img
-                src={Noise}
+                src={Noise.src}
                 alt=""
                 className="absolute w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover rounded-3xl"
               />
               <div className=" flex flex-col gap-6 relative">
                 <img
-                  src={moneyAnimation}
+                  src={moneyAnimation.src}
                   alt=""
                   className="z-10 absolute -top-[30px] left-[149px] w-[60px] h-[60px]"
                 />
-                <h1 className="font-intrument-sans z-20 w-full max-w-[360px] text-5xl font-semibold text-white">
+                <h1 className="font-[family-name:var(--font-instrument-sans)] z-20 w-full max-w-[360px] text-5xl font-semibold text-white">
                   The money app for <span className="italic">teenagers</span>
                 </h1>
-                <div className="w-full z-20 bg-Primary-500 rounded-4xl flex items-center justify-between">
+                <div className="w-full z-20 bg-Primary-500 rounded-[32px] flex items-center justify-between">
                   <button
                     onClick={() => setShowModal(true)}
-                    className="font-nunito hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold  px-4 rounded-4xl h-12"
+                    className="font-nunito hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold  px-4 rounded-[32px] h-12"
                   >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}
@@ -82,18 +70,18 @@ const Home = () => {
             </div>
             <div className="relative bg-Primary-700 rounded-3xl pt-[48px] px-6 block lg:hidden">
               <img
-                src={bgPattern}
+                src={bgPattern.src}
                 alt=""
                 className="absolute w-full h-full top-0 right-0 opacity-30 text-primary-600 object-cover rounded-3xl"
               />
               <img
-                src={Noise}
+                src={Noise.src}
                 alt=""
                 className="absolute w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover rounded-3xl"
               />
               <div className="relative flex flex-col items-center gap-6 z-20">
                 <img
-                  src={moneyAnimation}
+                  src={moneyAnimation.src}
                   alt=""
                   className=" absolute -top-[12px] left-[81px] w-[48px] h-[48px]"
                 />
@@ -102,7 +90,7 @@ const Home = () => {
                 </h1>
                 <button
                   onClick={() => setShowModal(true)}
-                  className="font-nunito hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                  className="font-nunito hover:bg-Primary-600 w-fit flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-[32px]"
                 >
                   <span className="flex items-center gap-[6px] text-white">
                     <AiFillApple className="text-white w-4 h-4" /> |{" "}
@@ -114,7 +102,7 @@ const Home = () => {
               </div>
               <div className="z-10 absolute bottom-0 left-0 h-[56px] bg-Primary-500 w-full rounded-b-2xl"></div>
             </div>
-            <div className="flex items-center gap-16 flex-wrap lg:flex-nowrap">
+            <div className="flex items-center gap-16 flex-wrap md:flex-nowrap">
               <div className="w-full flex flex-col gap-2">
                 <h3 className="font-intrument-sans text-3xl font-semibold text-gray-900">
                   Backed by real businesses
@@ -146,16 +134,16 @@ const Home = () => {
             <div className="lg:px-[48px] lg:pt-6 p-6 pb-0">
               <div className="bg-[#E3EDFC] rounded-t-[48px] w-full relative lg:pt-[48px] flex justify-center p-6 pb-0">
                 <img
-                  src={bgPattern}
+                  src={bgPattern.src}
                   alt=""
                   className="absolute rounded-t-[48px] w-full h-full top-0 right-0 opacity-30 text-primary-600 object-cover"
                 />
                 <img
-                  src={Noise}
+                  src={Noise.src}
                   alt=""
                   className="absolute rounded-t-[48px] w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover"
                 />
-                <img src={PhoneMockup2} alt="" className="z-20" />
+                <img src={PhoneMockup2.src} alt="" className="z-20" />
               </div>
             </div>
           </div>
@@ -166,10 +154,10 @@ const Home = () => {
               Why use MinieMoney
             </h2>
             <div className="flex flex-col gap-6">
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 rounded-[24px] bg-Green-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-Green-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -185,16 +173,15 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-Green-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-Green-200" />
-                      {/* <Wiggle className="fill-Green-200" /> */}
                     </div>
                     <Piggy className="w-[200px] h-[200px] z-10" />
                   </div>
                 </div>
               </div>
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 rounded-[24px] lg:order-2 bg-indigo-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-indigo-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -210,16 +197,15 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-indigo-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-indigo-200" />
-                      {/* <Wiggle className="fill-indigo-200" /> */}
                     </div>
                     <MoneyBag className="w-[200px] h-[200px] z-10" />
                   </div>
                 </div>
               </div>
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 rounded-[24px] bg-cyan-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-cyan-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -235,16 +221,15 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-cyan-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-cyan-200" />
-                      {/* <Wiggle className="fill-cyan-200" /> */}
                     </div>
                     <Gift className="w-[200px] h-[200px] z-10" />
                   </div>
                 </div>
               </div>
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 rounded-[24px] lg:order-2 bg-yellow-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-yellow-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -260,16 +245,15 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-yellow-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-yellow-200" />
-                      {/* <Wiggle className="fill-yellow-200" /> */}
                     </div>
                     <CreditCard className="w-[200px] h-[200px] z-10" />
                   </div>
                 </div>
               </div>
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 rounded-[24px] bg-moss-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-moss-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -285,16 +269,15 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-moss-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-moss-200" />
-                      {/* <Wiggle className="fill-moss-200" /> */}
                     </div>
                     <GraduationCap className="w-[200px] h-[200px] z-10" />
                   </div>
                 </div>
               </div>
-              <div className="flex items-stretch gap-6 flex-col lg:flex-row">
+              <div className="flex items-stretch gap-6 flex-col md:flex-row">
                 <div className="px-6 pt-6 lg:order-2 rounded-[24px] bg-violet-200 h-inherit flex items-end">
                   <div className="px-4 pt-4 bg-violet-100 rounded-t-[48px] mx-auto">
-                    <img src={PhoneMockup3} alt="" />
+                    <img src={PhoneMockup3.src} alt="" />
                   </div>
                 </div>
                 <div className="max-w-[620px] h-inherit flex flex-col rounded-[24px] bg-white">
@@ -310,7 +293,6 @@ const Home = () => {
                   <div className="h-full flex items-center justify-center bg-violet-100 rounded-b-[24px] relative">
                     <div className="absolute items-stretch w-full flex">
                       <Wiggle className="fill-violet-200" />
-                      {/* <Wiggle className="fill-violet-200" /> */}
                     </div>
                     <GraphBar className="w-[200px] h-[200px] z-10" />
                   </div>
@@ -343,7 +325,7 @@ const Home = () => {
                 <div className="p-6 bg-Primary-100 rounded-b-3xl ">
                   <div className="w-full h-full bg-Primary-600 flex items-center justify-center rounded-2xl  relative">
                     <img
-                      src={DotPattern}
+                      src={DotPattern.src}
                       alt=""
                       className="top-0 left-0 w-full h-full object-cover absolute rounded-2xl"
                     />
@@ -367,12 +349,20 @@ const Home = () => {
                 <div className="p-6 bg-Green-100 rounded-b-3xl ">
                   <div className="w-full h-full grid grid-cols-2 gap-4">
                     <img
-                      src={image1}
+                      src={image1.src}
                       alt=""
                       className="row-span-2 rounded-2xl w-full"
                     />
-                    <img src={image2} alt="" className="rounded-2xl w-full" />
-                    <img src={image3} alt="" className="rounded-2xl w-full" />
+                    <img
+                      src={image2.src}
+                      alt=""
+                      className="rounded-2xl w-full"
+                    />
+                    <img
+                      src={image3.src}
+                      alt=""
+                      className="rounded-2xl w-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -392,7 +382,10 @@ const Home = () => {
             <div className="flex items-center gap-8 lg:gap-[64px] flex-col lg:flex-row">
               <div
                 className="p-6 flex flex-col gap-6 rounded-3xl transition-transform duration-300"
-                style={{ background: currrentBackground }}
+                style={{
+                  background: currrentBackground,
+                  transition: "all 0.3s",
+                }}
               >
                 <p className="font-nunito lg:text-lg text-gray-700">
                   “MinieMoney is amazing, I was able to participate in a quiz
@@ -429,6 +422,7 @@ const Home = () => {
                               ? `2px solid ${testimonial.ring}`
                               : "none"
                           }`,
+                          transition: "all 0.3s",
                         }}
                       >
                         <div
@@ -436,7 +430,7 @@ const Home = () => {
                           style={{ background: testimonial.background }}
                         >
                           <img
-                            src={testimonial.image}
+                            src={testimonial.image?.src}
                             alt=""
                             className="w-[64px] h-[64px]"
                           />
@@ -484,12 +478,12 @@ const Home = () => {
             </h2>
             <div className="bg-[#E3EDFC] rounded-2xl w-full relative p-8 grid md:grid-cols-3 gap-[28px] grid-cols-1">
               <img
-                src={bgPattern}
+                src={bgPattern.src}
                 alt=""
                 className="absolute rounded-t-[48px] w-full h-full top-0 right-0 opacity-30 text-primary-600 object-cover"
               />
               <img
-                src={Noise}
+                src={Noise.src}
                 alt=""
                 className="absolute rounded-t-[48px] w-full h-full top-0 right-0 z-10 bg-transparent opacity-25 object-cover"
               />
@@ -499,10 +493,10 @@ const Home = () => {
                 </h3>
                 <div className="bg-Primary-100 rounded-t-[48px] p-4 pb-0 flex items-center gap-4 flex-col md:flex-row">
                   <div className="w-1/2">
-                    <img src={PhoneMockup2} alt="" className="w-full" />
+                    <img src={PhoneMockup2.src} alt="" className="w-full" />
                   </div>
                   <div className="w-1/2">
-                    <img src={PhoneMockup2} alt="" className="w-full" />
+                    <img src={PhoneMockup2.src} alt="" className="w-full" />
                   </div>
                 </div>
               </div>
@@ -511,7 +505,11 @@ const Home = () => {
                   Open an account in 3 steps
                 </h3>
                 <div className="bg-Primary-100 rounded-t-[48px] p-4 pb-0 w-full h-full">
-                  <img src={PhoneMockup2} alt="" className="w-full h-full" />
+                  <img
+                    src={PhoneMockup2.src}
+                    alt=""
+                    className="w-full h-full"
+                  />
                 </div>
               </div>
             </div>
@@ -530,7 +528,7 @@ const Home = () => {
                   with us today!{" "}
                   <button
                     onClick={() => setShowModal(true)}
-                    className="font-nunito hover:bg-Primary-600 flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-4xl"
+                    className="font-nunito hover:bg-Primary-600 flex items-center gap-2 bg-Primary-500 text-white text-sm font-semibold py-[10px] px-4 rounded-[32px]"
                   >
                     <span className="flex items-center gap-[6px] text-white">
                       <AiFillApple className="text-white w-4 h-4" /> |{" "}
@@ -554,6 +552,4 @@ const Home = () => {
       <DownloadModal open={showModal} onClose={() => setShowModal(false)} />
     </div>
   );
-};
-
-export default Home;
+}

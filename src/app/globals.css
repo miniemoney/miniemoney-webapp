@@ -1,0 +1,88 @@
+/* @import "tailwindcss"; */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --color-cyan-25: #f5feff;
+  --color-cyan-50: #ecfdff;
+  --color-cyan-100: #cff9fe;
+  --color-cyan-200: #a5f0fc;
+  --color-cyan-300: #67e3f9;
+  --color-moss-50: #f5fbee;
+  --color-moss-100: #e6f4d7;
+  --color-moss-200: #ceeab0;
+  --color-moss-300: #acdc79;
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ece9fe;
+  --color-violet-200: #ddd6fe;
+  --color-violet-300: #c3b5fd;
+  --color-yellow-50: #fefbe8;
+  --color-yellow-100: #fef7c3;
+  --color-yellow-200: #feee95;
+  --color-yellow-300: #fde272;
+  --color-indigo-50: #eef4ff;
+  --color-indigo-100: #e0eaff;
+  --color-indigo-200: #c7d7fe;
+  --color-indigo-300: #a4bcfd;
+  --color-gray-25: #fcfcfd;
+  --color-gray-600: #475467;
+  --color-gray-900: #101828;
+  --color-Primary-25: #f5f9fe;
+  --color-Primary-50: #f9fafb;
+  --color-Primary-100: #c6dbfb;
+  --color-Primary-300: #71a6f4;
+  --color-Primary-400: #4288f0;
+  --color-Primary-500: #005feb;
+  --color-Primary-600: #004ec2;
+  --color-Primary-700: #003e99;
+  --color-Purple-200: #d9d6fe;
+  --color-Green-200: #aaf0c4;
+  --color-Green-100: #d3f8df;
+  --font-intrument-sans: "Instrument Sans", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+.fade {
+  background: linear-gradient(
+    90deg,
+    #fcfcfd 6%,
+    rgba(252, 252, 253, 0) 12%,
+    rgba(252, 252, 253, 0) 88%,
+    #fcfcfd 94%
+  );
+}

@@ -13,9 +13,9 @@ export type CustomButtonProps = {
   backgroundColor?: string;
   loading?: boolean;
   disabled?: boolean;
-  children: string | JSX.Element;
+  children: string | React.ReactNode;
 };
 
 export type DropdownButtonProps = Omit<CustomButtonProps, "onClick"> & {
-  dropdownContent: JSX.Element;
+  dropdownContent: React.ReactNode;
 };

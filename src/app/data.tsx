@@ -1,23 +1,19 @@
-import {
-  BaseOneIcon,
-  FilmHouseIcon,
-  NGXIcon,
-  VFDIcon,
-} from "../../components/customIcon";
-import testimony1 from "/testimony_1.png";
-import testimony2 from "/testimony_2.png";
-import testimony3 from "/testimony_3.png";
-import testimony4 from "/testimony_4.png";
+
+import { VFDIcon, BaseOneIcon, FilmHouseIcon, NGXIcon } from "@/components/customIcon";
+import testimony2 from "../../public/testimony_2.png";
+import testimony3 from "../../public/testimony_3.png";
+import testimony1 from "../../public/testimony_1.png";
+import testimony4 from "../../public/testimony_4.png";
 
 export const items = [
-  <VFDIcon className="text-Primary-500" />,
-  <BaseOneIcon className="text-Primary-500" />,
-  <FilmHouseIcon className="text-Primary-500" />,
-  <NGXIcon className="text-Primary-500" />,
-  <VFDIcon className="text-Primary-500" />,
-  <BaseOneIcon className="text-Primary-500" />,
-  <FilmHouseIcon className="text-Primary-500" />,
-  <NGXIcon className="text-Primary-500" />,
+  <VFDIcon key={1} className="text-Primary-500" />,
+  <BaseOneIcon key={2} className="text-Primary-500" />,
+  <FilmHouseIcon key={3} className="text-Primary-500" />,
+  <NGXIcon key={4} className="text-Primary-500" />,
+  <VFDIcon key={5} className="text-Primary-500" />,
+  <BaseOneIcon key={6} className="text-Primary-500" />,
+  <FilmHouseIcon key={7} className="text-Primary-500" />,
+  <NGXIcon key={8} className="text-Primary-500" />,
 ];
 
 export const testimonials = [
