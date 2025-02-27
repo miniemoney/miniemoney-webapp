@@ -6,16 +6,21 @@ import { LuArrowUpRight } from "react-icons/lu";
 import DownloadModal from "../components/downloadModal";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const today = new Date();
-  const handleFaqScroll = (e: React.MouseEvent<HTMLParagraphElement>) => {
-    e.preventDefault();
-    const aboutSection = document.getElementById("faq");
-    aboutSection?.scrollIntoView({ behavior: "smooth" });
-  };
-  // const navigate = useNavigate()
+  const pathname = usePathname()
+  const router = useRouter()
+  const handleFaq = () => {
+    if (pathname === "/") {
+      const aboutSection = document.getElementById("faq");
+      aboutSection?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#faq")
+    }
+  }
   return (
     <div className="w-full bg-Primary-600 relative">
       <DownloadModal open={showModal} onClose={() => setShowModal(false)} />
@@ -86,7 +91,7 @@ const Footer = () => {
                 </p>
                 <div className="flex flex-col">
                   <div
-                    onClick={handleFaqScroll}
+                    onClick={handleFaq}
                     className="cursor-pointer font-nunito py-2 text-white font-medium"
                   >
                     FAQs

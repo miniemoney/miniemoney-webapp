@@ -2,7 +2,7 @@ import { ClipBoardIcon, Logo, MenuBoard } from "@/components/customIcon";
 import DownloadModal from "@/components/downloadModal";
 import DropdownButton, { MobileDropdownButton } from "@/components/DropdownButton";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { AiFillApple, AiOutlineClose } from "react-icons/ai";
 import { FaGooglePlay } from "react-icons/fa";
@@ -16,12 +16,15 @@ import { VscLink } from "react-icons/vsc";
 const Navbar = () => {
   const [showSide, setShowSide] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const pathname = usePathname();
   const router = useRouter();
-
-  const handleFaqScroll = (e: React.MouseEvent<HTMLParagraphElement>) => {
-    e.preventDefault();
-    const aboutSection = document.getElementById("faq");
-    aboutSection?.scrollIntoView({ behavior: "smooth" });
+  const handleFaq = () => {
+    if (pathname === "/") {
+      const aboutSection = document.getElementById("faq");
+      aboutSection?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#faq");
+    }
   };
 
   return (
@@ -160,7 +163,7 @@ const Navbar = () => {
                           FAQ
                         </div>
                       ),
-                      onClick: handleFaqScroll,
+                      onClick: handleFaq,
                     },
                     {
                       id: 2,
@@ -360,7 +363,7 @@ const Navbar = () => {
                           FAQ
                         </div>
                       ),
-                      onClick: handleFaqScroll,
+                      onClick: handleFaq,
                     },
                     {
                       id: 2,

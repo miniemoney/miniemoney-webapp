@@ -13,10 +13,10 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Minie money",
+  title: "MinieMoney",
   description: "The money app for teenagers",
   openGraph: {
-    title: "Minie money",
+    title: "MinieMoney",
     url: "https://miniemoney.com",
     description: "The money app for teenagers",
     images: [

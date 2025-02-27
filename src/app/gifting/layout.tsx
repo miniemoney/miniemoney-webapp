@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Minie money || Gifting",
+  title: "MinieMoney || Gifting",
   description: "Support your loved ones’ savings with a thoughtful cash gift.",
   openGraph: {
-    title: "Minie money || Gifting",
+    title: "MinieMoney || Gifting",
     description:
       "Support your loved ones’ savings with a thoughtful cash gift.",
     url: "https://miniemoney.com/gifting",

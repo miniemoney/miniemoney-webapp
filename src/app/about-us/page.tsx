@@ -15,7 +15,6 @@ import AboutUs4 from "../../../public/about_us_4.png";
 import AboutUs5 from "../../../public/about_us_5.png";
 import AboutUs6 from "../../../public/about_us_6.png";
 import AboutUs7 from "../../../public/about_us_7.png";
-import AboutUs8 from "../../../public/about_us_8.png";
 import bgPattern from "../../../public/Miniemoney_Pattern.png";
 import moneyAnimation from "../../../public/money-animation.gif";
 import PhoneMockup5 from "../../../public/phone_mockup_5.png";
@@ -124,18 +123,18 @@ const AboutUs = () => {
               <img src={AboutUs2.src} alt="" className="w-full h-full" />
             </div>
             <div className="p-8 bg-white flex flex-col gap-2 w-full md:w-[520px]">
-              <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
+              <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900 -tracking-[2%]">
                 Learning about money is a very important life skill.
               </h3>
               <div className="flex flex-col gap-4">
-                <p className="font-nunito md:text-sm text-gray-600">
+                <p className="font-nunito md:text-lg text-gray-600">
                   Kids begin to form lifelong habits from as early as 7 years
                   old, so why not take the opportunity to start teaching your
                   kids about money as early as possible? Just like every skill
                   or habit we have picked up, we learnt them by doing it over
                   and over again.
                 </p>
-                <p className="font-nunito md:text-sm text-gray-600">
+                <p className="font-nunito md:text-lg text-gray-600">
                   With MinieMoney, they get to understand money by practising
                   and having control of the money they spend, save, and earn
                   with the guidance of their parents.
@@ -147,12 +146,12 @@ const AboutUs = () => {
         <Section className="px-5 py-[80px] md:py-[120px] bg-white">
           <div className="flex gap-8 md:gap-12 items-center flex-wrap md:flex-nowrap">
             <div className="flex flex-col gap-4 w-full ">
-              <div className="grid grid-cols-5 items-stretch gap-4 w-full md:w-[420px]">
-                <div className="flex flex-col gap-4 h-full col-span-2">
+              <div className="flex gap-4 w-full flex-grow md:w-[420px]">
+                <div className="flex flex-col gap-4 flex-grow">
                   <img src={AboutUs3.src} alt="" className="flex-grow" />
                   <img src={AboutUs5.src} alt="" className="flex-grow" />
                 </div>
-                <div className="flex flex-col gap-4 col-span-3">
+                <div className="flex flex-col gap-4 flex-grow">
                   <img src={AboutUs4.src} alt="" className="col-span-3" />
                   <img src={AboutUs6.src} alt="" className="col-span-3" />
                 </div>
@@ -160,7 +159,7 @@ const AboutUs = () => {
               <img src={AboutUs7.src} alt="" className="col-span-5" />
             </div>
             <div className="flex flex-col gap-3 ">
-              <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
+              <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900 -tracking-[0.72px]">
                 We are building a community of parents wey sabi!
               </h3>
               <div className="flex flex-col gap-4">
@@ -188,31 +187,7 @@ const AboutUs = () => {
             </div>
           </div>
         </Section>
-        <Section className="px-5 py-[80px] md:py-[120px] bg-white">
-          <div className="flex items-stretch w-full flex-wrap md:flex-nowrap">
-            <div className="p-6 order-2 rounded-b-3xl md:rounded-r-3xl bg-Purple-200 flex-grow ">
-              <img src={AboutUs8.src} alt="" className="w-full h-full" />
-            </div>
-            <div className="p-8 bg-white flex flex-col gap-2 w-[600px]">
-              <h3 className="font-intrument-sans text-[30px] md:text-[36px] font-semibold text-gray-900">
-                Founded by a parent
-              </h3>
-              <div className="flex flex-col gap-4">
-                <p className="font-nunito md:text-sm text-gray-600">
-                  MinieMoney was founded by a father of three and a seasoned
-                  business developer with a strong academic background and a
-                  global career spanning multiple cities.
-                </p>
-                <p className="font-nunito md:text-sm text-gray-600">
-                  With a BSc in Insurance and an MSc in Global Business, he
-                  combines expertise with a passion for turning ideas into
-                  rewarding ventures—building a smarter financial future for the
-                  next generation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Section>
+
         <Section className="px-5 py-[80px] md:py-[120px] bg-white">
           <div className="bg-Primary-25 rounded-2xl relative pt-[48px] pb-0 lg:pl-[48px] lg:pr-8 px-6 overflow-hidden">
             <WiggleLong className="absolute top-0 left-0 " />
