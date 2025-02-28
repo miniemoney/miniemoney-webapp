@@ -118,18 +118,19 @@ const Footer = () => {
                   >
                     Terms of service
                   </p>
-                  <p
+                  <Link
                     // onClick={() => navigate("/privacy-policy")}
+                    href="/privacy-policy"
                     className="font-nunito py-2 text-white font-medium cursor-pointer"
                   >
                     Privacy policy
-                  </p>
-                  <p
-                    // onClick={() => navigate("/privacy-policy")}
+                  </Link>
+                  <Link
+                    href={"/AML-policy"}
                     className="font-nunito py-2 text-white font-medium cursor-pointer"
                   >
                     AML Policy
-                  </p>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col gap-1">
