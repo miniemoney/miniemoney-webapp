@@ -18,7 +18,7 @@ const FirstStep = ({
     initialValue.recipientEmail === "";
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    if (name === "Amount") {
+    if (name === "amount") {
       const numericValue = value.replace(/[^0-9.]/g, "");
 
       const formattedValue = formatNumberWithCommas(numericValue);
