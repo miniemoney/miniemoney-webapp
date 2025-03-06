@@ -6,7 +6,6 @@ type Props = {
   params: Promise<{ id: string }>;
 };
 
-
 const fetchUser = async (id: string): Promise<Tuser> => {
   try {
     const res = await fetch(`https://wallet.miniemoneyapi.com/payment/${id}`, {
@@ -43,6 +42,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [
         {
           url: `${user.profileImage}`,
+          width: 1200,
+          height: 630,
         },
       ],
       url: `https://miniemoney.com/`,
@@ -52,7 +53,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-    const { id } = await params;
+  const { id } = await params;
   return (
     <div>
       <Render id={id} />

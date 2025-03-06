@@ -1,12 +1,20 @@
 import { minieformValue } from "@/app/[id]/render";
+import { Tuser } from "@/types/user";
 import { IoArrowBack } from "react-icons/io5";
+import Paystack from "./Paystack";
 
 const ConfirmationPage = ({
-    initialValue,
-    setStep
+  initialValue,
+  setStep,
+  handlePayment,
+  data,
+  id,
 }: {
   initialValue: minieformValue;
   setStep: React.Dispatch<React.SetStateAction<number>>;
+  handlePayment: (reference: string) => void;
+  data: Tuser | null;
+  id: string;
 }) => {
   return (
     <div>
@@ -29,13 +37,12 @@ const ConfirmationPage = ({
         >
           <IoArrowBack /> Back
         </button>
-        <button
-        //   disabled={disable || loading}
-        //   onClick={() => handleSubmit(initialValue)}
-          className="disabled:bg-[#F2F4F7] disabled:text-[#98A2B3] disabled:cursor-not-allowed flex items-center justify-center w-full py-3 px-5 rounded-[32px] bg-[#005FEB] text-white font-semibold"
-        >
-          Continue to send money
-        </button>
+        <Paystack
+          data={data}
+          handlePayment={(reference) => handlePayment(reference)}
+          initialValue={initialValue}
+          id={id}
+        />
       </div>
     </div>
   );

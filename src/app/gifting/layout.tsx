@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://res.cloudinary.com/dvqiawhl4/image/upload/v1740553156/minie-link/tmymhjyef4zscc0yod74.png",
+        width: 1200,
+        height: 630,
       },
     ],
   },

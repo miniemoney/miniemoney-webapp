@@ -12,6 +12,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { LuUser } from "react-icons/lu";
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
+import { standardAmountFormat } from "@/helpers/FormatAmount";
 
 export type minieformValue = {
   name: string;
@@ -37,13 +40,33 @@ const Render = ({ id }: { id: string }) => {
     setLoading(true);
     try {
       const response = await fetchUser(id);
-
       setData(response);
     } catch (error) {
       throw error;
     } finally {
       setLoading(false);
     }
+  };
+
+  const handlePayment = (reference: string) => {
+    console.log(reference);
+    setLoading(true);
+    const id = toast.loading("Completing transaction, please wait...");
+    setTimeout(() => {
+      toast.dismiss(id);
+      Swal.fire({
+        icon: "success",
+        title: "Transaction successful!",
+        text:
+          "You have successfully transferred " +
+          standardAmountFormat(initialValue.amount) +
+          " to " +
+          data?.firstName,
+        confirmButtonColor: "#0066f5",
+      }).then(() => {
+        window.location.reload();
+      });
+    }, 3000);
   };
 
   const renderStep = (step: number) => {
@@ -59,7 +82,13 @@ const Render = ({ id }: { id: string }) => {
         );
       case 2:
         return (
-          <ConfirmationPage initialValue={initialValue} setStep={setStep} />
+          <ConfirmationPage
+            handlePayment={(reference) => handlePayment(reference)}
+            initialValue={initialValue}
+            setStep={setStep}
+            data={data}
+            id = {id}
+          />
         );
       default:
         break;
