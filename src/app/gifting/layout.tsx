@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     url: "https://miniemoney.com/gifting",
     images: [
       {
-        url: "https://res.cloudinary.com/dvqiawhl4/image/upload/v1740553156/minie-link/tmymhjyef4zscc0yod74.png",
+        url: "https://res.cloudinary.com/dvqiawhl4/image/upload/v1741261603/MinieMoney_-_Gifting_Thumbnail_1_yocnzh.png",
         width: 1200,
         height: 630,
       },

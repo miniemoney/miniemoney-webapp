@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "The money app for teenagers",
     images: [
       {
-        url: "https://res.cloudinary.com/dvqiawhl4/image/upload/v1740553167/minie-link/yzgz54vf5vqfzzypthmo.png",
+        url: "https://res.cloudinary.com/dvqiawhl4/image/upload/v1741261601/MinieMoney_-_Website_Thumbnail_1_pb6c4p.png",
         width: 1200,
         height: 630,
       },
