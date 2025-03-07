@@ -26,7 +26,7 @@ function Paystack({
     email:
       initialValue?.email !== "" ? initialValue?.email : "hello@miniemoney.com",
     amount: parseFloat(
-      (parseFloat(initialValue?.amount) * 100 * 1.015).toFixed(2)
+      (parseFloat(initialValue?.amount.replaceAll(",", "")) * 100 * 1.015).toFixed(2)
     ),
     publicKey: "pk_live_75b2fa1bf9ff039679aea7bc981c032121a4db0a",
     metadata: {

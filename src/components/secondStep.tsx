@@ -40,7 +40,10 @@ const SecondStep = ({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ amount: parseInt(amount), ...otherArgs }),
+        body: JSON.stringify({
+          amount: parseInt(amount.replaceAll(",", "")),
+          ...otherArgs,
+        }),
       })
         .then((response) => {
           if (response.status === 200) {
